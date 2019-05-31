@@ -6,38 +6,51 @@ namespace UniversityHospital.cs
 {
     class Menu
     {
+        bool start = true;
+
+
         public void MainMenu()
         {
-            Console.WriteLine("Welcome to Univserity Hospitals Database!\nWhat would you like to do?\n\n");
-            Console.WriteLine(" 1.  Add New Employee");
-            Console.WriteLine(" 2.  Pay an Employee");
-            Console.WriteLine(" 3.  Check Patient Status");
-            Console.WriteLine(" 4.  Check Employee Status");
-            Console.WriteLine(" 5.  Payroll");
-            Console.WriteLine(" 6.  Quit");
-            int menuResponse = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Welcome to Univserity Hospitals Database!");
 
-            switch (menuResponse)
+            do
             {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                case 4:
-                    break;
-                case 5:
-                    break;
-                case 6:
-                    break;
-                default:
-                    break;
+                Console.WriteLine("What would you like to do?\n\n");
+                Console.WriteLine(" 1.  Add New Employee");
+                Console.WriteLine(" 2.  Pay an Employee");
+                Console.WriteLine(" 3.  Check Patient Status");
+                Console.WriteLine(" 4.  Check Employee Status");
+                Console.WriteLine(" 5.  Payroll");
+                Console.WriteLine(" 6.  Quit");
+                int menuResponse = Convert.ToInt32(Console.ReadLine());
 
+                if (menuResponse.Equals(6))
+                {
+                    start = false;
+                }
 
-            }
-
+                switch (menuResponse)
+                {
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        break;
+                    case 6:
+                        break;
+                    default:
+                        Console.WriteLine("Please enter a value between \"1\" and \"6\"");
+                        break;
+                }
+                Console.Clear();
+            } while (start);
         }
-        
+
     }
+        
 }
