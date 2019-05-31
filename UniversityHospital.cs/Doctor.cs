@@ -4,7 +4,16 @@ using System.Text;
 
 namespace UniversityHospital.cs
 {
-    class Doctor : Employee
+    public class Doctor : Employee
+
     {
+        public string SpecialtyArea { get; set; }
+
+        public Doctor() : base()
+        {
+           
+            
+        }
+
     }
 }
