@@ -6,7 +6,8 @@ namespace UniversityHospital.cs
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Menu menu = new Menu();
+            menu.MainMenu();
         }
     }
 }
