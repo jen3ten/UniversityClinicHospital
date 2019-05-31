@@ -15,5 +15,6 @@ namespace UniversityHospital.cs
             
         }
 
+        dr1 ("John Smith", 90808, "")
     }
 }
