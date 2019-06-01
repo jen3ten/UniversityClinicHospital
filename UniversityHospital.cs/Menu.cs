@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UniversityHospital.cs
 {
-    class Menu
+    public class Menu
     {
         bool start = true;
 
@@ -17,7 +17,7 @@ namespace UniversityHospital.cs
             {
                 Console.WriteLine("What would you like to do?\n\n");
                 Console.WriteLine(" 1.  Add New Employee");
-                Console.WriteLine(" 2. Fire an Employee");
+                Console.WriteLine(" 2.  Fire an Employee");
                 Console.WriteLine(" 3.  Pay an Employee");
                 Console.WriteLine(" 4.  Check Patient Status");
                 Console.WriteLine(" 5.  Check Employee Status");
@@ -25,7 +25,7 @@ namespace UniversityHospital.cs
                 Console.WriteLine(" 7.  Quit");
                 int menuResponse = Convert.ToInt32(Console.ReadLine());
 
-                if (menuResponse.Equals(6))
+                if (menuResponse.Equals(7))
                 {
                     start = false;
                 }
