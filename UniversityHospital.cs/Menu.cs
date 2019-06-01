@@ -26,11 +26,9 @@ namespace UniversityHospital.cs
                 Console.WriteLine(" 7.  Quit");
                 int menuResponse = Convert.ToInt32(Console.ReadLine());
 
-<<<<<<< HEAD
                 payroll = new Payroll(); //I think this is where we need to reference it to get the add list method to work, but I'm still having trouble getting it to run
 
-=======
->>>>>>> 4db8bf5285a5773e8c437b21711b1a8f49d848f1
+
                 if (menuResponse.Equals(7))
                 {
                     start = false;
