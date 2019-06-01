@@ -10,7 +10,7 @@ namespace UniversityHospital.cs
 
         public Nurse(string name, int number, string specialty, string patientNumber) : base()
         {
-            Position = "Doctor";
+            Position = "Nurse";
             Salary = "$50,000";
             SpecialtyArea = specialty;
             Name = name;

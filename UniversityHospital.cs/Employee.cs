@@ -12,7 +12,7 @@ namespace UniversityHospital.cs
         public string Position { get; set; }
         public string SalaryPaid { get; set; }
         public string NumberOfPatients { get; set; } 
-
+        
 
         /*Payroll payroll = new Payroll();
 

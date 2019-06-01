@@ -12,9 +12,12 @@ namespace UniversityHospital.cs
         Doctor dr2 = new Doctor("Roth, Elise", 8213, "Neuro Surgeon", "5");
         Doctor dr3 = new Doctor("Dolson, Miranda", 8497, "Obstetrics\t", "16");
         Doctor dr4 = new Doctor("Sandhu, Cory", 8109, "Pediatrics\t", "11");
-        Doctor dr5 = new Doctor("Messaros, Kyle", 8670, "Funcitonal Medicine", "8");
+        Doctor dr5 = new Doctor("Messaros, Kyle", 8670, "Oncology\t", "8");
+
         Janitor j1 = new Janitor("Smith, Matthew", 3561, "\tYes");
         Janitor j2 = new Janitor("Watt, Jonathan", 3213, "\tNo");
+
+        Nurse n1 = new Nurse("Marshall, Ruby", 7512, "--", "21");
 
         public void AddEmployeeToList()
         {
@@ -23,7 +26,9 @@ namespace UniversityHospital.cs
             employeeList.Add(dr3);
             employeeList.Add(dr4);
             employeeList.Add(dr5);
-            //employeeList.Add(j1);
+            employeeList.Add(j1);
+            employeeList.Add(j2);
+            employeeList.Add(n1);
         }
 
         public void EmployeeList()
@@ -42,12 +47,12 @@ namespace UniversityHospital.cs
         {
             Console.WriteLine("\n\tDoctor List:\n");
             Console.WriteLine("EmployeeName\t  | Number | Specialty\t\t| # of Patients |");
-            Console.WriteLine("------------------|--------|----------------------|---------------|");
+            Console.WriteLine("------------------|--------|--------------------|---------------|");
 
             int i = 1;
-            foreach (Doctor element in employeeList)
+            foreach (Doctor element in employeeList) //This causes the program to crash once it reaches the janitor values
             {
-                Console.WriteLine($"{element.Name}\t  |  {element.EmployeeNumber}  |  {element.SpecialtyArea}\t| {element.NumberOfPatients} \t\t|");
+                Console.WriteLine($"{element.Name}\t  |  {element.EmployeeNumber}  | {element.SpecialtyArea}\t| {element.NumberOfPatients} \t\t|");
             }
             Console.WriteLine(" ");
         }

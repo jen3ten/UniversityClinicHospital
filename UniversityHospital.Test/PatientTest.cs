@@ -11,7 +11,6 @@ namespace UniversityHospital.Test
         public void Doctor_Salary_Equal_90k()
         {
             Patient sut = new Patient("", number);
-            Patient p1;
 
             Assert.Equal(90000, sut.PatientNumber);
         }
