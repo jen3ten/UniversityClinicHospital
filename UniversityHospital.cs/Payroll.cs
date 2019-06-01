@@ -52,7 +52,7 @@ namespace UniversityHospital.cs
             int i = 1;
             foreach (Doctor element in employeeList) //This causes the program to crash once it reaches the janitor values
             {
-                Console.WriteLine($"{element.Name}\t  |  {element.EmployeeNumber}  | {element.SpecialtyArea}\t| {element.NumberOfPatients} \t\t|");
+                Console.WriteLine($"{element.Name}\t  |  {element.EmployeeNumber}  | \t| {element.NumberOfPatients} \t\t|");
             }
             Console.WriteLine(" ");
         }

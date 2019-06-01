@@ -45,7 +45,6 @@ namespace UniversityHospital.cs
                     case 4:
                         break;
                     case 5:
-                        payroll.AddEmployeeToList();
                         payroll.DoctorList();
                         break;
                     case 6:
