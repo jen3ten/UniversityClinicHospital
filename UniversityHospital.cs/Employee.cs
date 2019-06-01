@@ -9,14 +9,29 @@ namespace UniversityHospital.cs
         public string Name { get; set; }
         public int EmployeeNumber { get; set; }
         public int Salary { get; set; }
-        public string Position
+        public string Position { get; set; }
 
-        public Employee(string name, int number, string position)
+        Payroll payroll = new Payroll();
+
+        public Employee(string name)
         {
             Name = name;
-            EmployeeNumber = number;
-            Position = position;
+            //EmployeeNumber = number;
+            //Salary = salary;
+           // Position = position;
         }
+         public Employee(int number)
+        {
+            EmployeeNumber = number;
+        }
+
+        public Employee(int salary)
+        {
+            Salary = salary;
+        }
+       
+        public virtual void GetNameEmployeeNumber()
+
 
     }
 }

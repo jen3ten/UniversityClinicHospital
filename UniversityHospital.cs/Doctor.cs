@@ -7,20 +7,24 @@ namespace UniversityHospital.cs
     public class Doctor : Employee
 
     {
-        Doctor dr;
-        public string SpecialtyArea { get; set; }
-        public int Salary { get; set; }
+        
+        public int NumberOfPatients { get; set; }
+        Payroll payroll = new Payroll();
 
-        public Doctor() : base("", int number,"")
+        public Doctor(string name) : base()  // having trouble w argument- following ex in practice inheritance we did in class... After we get this part everything else should fall through
         {
-            Position = "Doctor";
-            Salary = 90000;
+            name = "Francona, Terry";
+            name = "Roth, Elise";    //??
+                                                       //Salary is being inherited - why I took salary out
         }
 
-            Doctor dr1 = new Doctor("Francona, Terry", 8561, "");
-            Doctor dr2 = new Doctor("Roth, Elise", 8213, "");
-            Doctor dr3 = new Doctor("Dolson, Miranda", 8497, "");
-            Doctor dr4 = new Doctor("Sandhu, Cory", 8109, "");
-            Doctor dr5 = new Doctor("Messaros, Kyle", 8670, "");
+
+                                                        // I believe this should 
+
+            //Doctor dr1 = new Doctor("Francona, Terry", 8561, "");
+            //Doctor dr2 = new Doctor("Roth, Elise", 8213, "");
+            //Doctor dr3 = new Doctor("Dolson, Miranda", 8497, "");
+            //Doctor dr4 = new Doctor("Sandhu, Cory", 8109, "");
+            //Doctor dr5 = new Doctor("Messaros, Kyle", 8670, "");
     }
 }

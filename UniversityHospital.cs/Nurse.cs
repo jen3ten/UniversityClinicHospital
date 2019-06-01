@@ -4,15 +4,15 @@ using System.Text;
 
 namespace UniversityHospital.cs
 {
-    /*public class Nurse : Employee
+    public class Nurse : Employee
     {
         public int NumberOfPatients { get; set;  }
 
-        public Nurse() : base()
+        public Nurse() : base("")
         {
-
+            NumberOfPatients = 8;
         }
 
 
-    }*/
+    }
 }

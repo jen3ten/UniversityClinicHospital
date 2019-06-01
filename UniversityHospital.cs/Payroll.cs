@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UniversityHospital.cs
 {
-    class Payroll
+    public class Payroll
     {
         List<Payroll> employeeList = new List<Payroll>();
     }
