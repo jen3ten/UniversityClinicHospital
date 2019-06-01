@@ -9,15 +9,18 @@ namespace UniversityHospital.cs
     {
         Doctor dr;
         public string SpecialtyArea { get; set; }
+        public int Salary { get; set; }
 
-        public Doctor(string name, int number, int salary) : base("", number, 90000)
+        public Doctor() : base("", int number,"")
         {
-            Doctor dr1 = new Doctor("Francona, Terry", 8561, Salary);
-            Doctor dr2 = new Doctor("Roth, Elise", 8213, Salary);
-            Doctor dr3 = new Doctor("Dolson, Miranda", 8497, Salary);
-            Doctor dr4 = new Doctor("Sandhu, Cory", 8109, Salary);
-            Doctor dr5 = new Doctor("Messaros, Kyle", 8670, Salary);
+            Position = "Doctor";
+            Salary = 90000;
         }
 
+            Doctor dr1 = new Doctor("Francona, Terry", 8561, "");
+            Doctor dr2 = new Doctor("Roth, Elise", 8213, "");
+            Doctor dr3 = new Doctor("Dolson, Miranda", 8497, "");
+            Doctor dr4 = new Doctor("Sandhu, Cory", 8109, "");
+            Doctor dr5 = new Doctor("Messaros, Kyle", 8670, "");
     }
 }

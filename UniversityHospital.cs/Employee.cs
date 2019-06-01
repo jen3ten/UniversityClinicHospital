@@ -9,12 +9,13 @@ namespace UniversityHospital.cs
         public string Name { get; set; }
         public int EmployeeNumber { get; set; }
         public int Salary { get; set; }
+        public string Position
 
-        public Employee(string name, int number, int salary)
+        public Employee(string name, int number, string position)
         {
             Name = name;
             EmployeeNumber = number;
-            Salary = salary;
+            Position = position;
         }
 
     }
