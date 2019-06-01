@@ -45,8 +45,11 @@ namespace UniversityHospital.cs
                     case 4:
                         break;
                     case 5:
+                        payroll.AddEmployeeToList();
+                        payroll.DoctorList();
                         break;
                     case 6:
+                        payroll.AddEmployeeToList();
                         payroll.EmployeeList();
                         break;
                     case 7:
@@ -55,7 +58,6 @@ namespace UniversityHospital.cs
                         Console.WriteLine("Please enter a value between \"1\" and \"6\"");
                         break;
                 }
-                Console.Clear();
             } while (start);
         }
 

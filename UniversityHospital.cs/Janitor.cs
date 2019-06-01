@@ -12,7 +12,7 @@ namespace UniversityHospital.cs
         {
             Name = name;
             EmployeeNumber = number;
-            Salary = 40000;
+            Salary = "$40,000";
             Sweep = sweep;
             Position = "Janitor";
         }

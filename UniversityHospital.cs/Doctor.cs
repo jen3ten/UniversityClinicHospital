@@ -8,17 +8,16 @@ namespace UniversityHospital.cs
 
     {
 
-        //public int NumberOfPatients { get; set; }
         public string SpecialtyArea { get; set; }
 
-        public Doctor(string name, int number, string specialty) : base()
+        public Doctor(string name, int number, string specialty, string patientNumber) : base()
         {
             Position = "Doctor";
-            Salary = 90000;
+            Salary = "$90,000";
             SpecialtyArea = specialty;
             Name = name;
             EmployeeNumber = number;
-            //NumberOfPatients = 8 -- I don't know where we want to set that value.
+            NumberOfPatients = patientNumber;
             //SalaryPaid = false;
         }
 

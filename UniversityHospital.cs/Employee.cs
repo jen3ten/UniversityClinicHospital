@@ -8,9 +8,11 @@ namespace UniversityHospital.cs
     {
         public string Name { get; set; }
         public int EmployeeNumber { get; set; }
-        public int Salary { get; set; }
+        public string Salary { get; set; }
         public string Position { get; set; }
         public string SalaryPaid { get; set; }
+        public string NumberOfPatients { get; set; } 
+
 
         /*Payroll payroll = new Payroll();
 
