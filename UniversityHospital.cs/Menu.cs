@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UniversityHospital.cs
 {
-    class Menu
+    public class Menu
     {
         bool start = true;
         Payroll payroll;
@@ -18,7 +18,7 @@ namespace UniversityHospital.cs
             {
                 Console.WriteLine("What would you like to do?\n\n");
                 Console.WriteLine(" 1.  Add New Employee");
-                Console.WriteLine(" 2. Fire an Employee");
+                Console.WriteLine(" 2.  Fire an Employee");
                 Console.WriteLine(" 3.  Pay an Employee");
                 Console.WriteLine(" 4.  Check Patient Status");
                 Console.WriteLine(" 5.  Check Employee Status");
@@ -26,8 +26,11 @@ namespace UniversityHospital.cs
                 Console.WriteLine(" 7.  Quit");
                 int menuResponse = Convert.ToInt32(Console.ReadLine());
 
+<<<<<<< HEAD
                 payroll = new Payroll(); //I think this is where we need to reference it to get the add list method to work, but I'm still having trouble getting it to run
 
+=======
+>>>>>>> 4db8bf5285a5773e8c437b21711b1a8f49d848f1
                 if (menuResponse.Equals(7))
                 {
                     start = false;
