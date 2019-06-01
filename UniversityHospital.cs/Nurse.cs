@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UniversityHospital.cs
 {
-    public class Nurse : Employee
+    /*public class Nurse : Employee
     {
         public int NumberOfPatients { get; set;  }
 
@@ -14,5 +14,5 @@ namespace UniversityHospital.cs
         }
 
 
-    }
+    }*/
 }

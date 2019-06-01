@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UniversityHospital.cs
 {
-    class Patient
+    public class Patient
     {
         public string Name { get; set; }
         public int PatientNumber { get; set; }
@@ -13,9 +13,22 @@ namespace UniversityHospital.cs
 
         public Patient(string name, int number)
         {
+            Name = name;
+            PatientNumber = number;
             HealthLevel = 20;
             BloodLevel = 10;
-           
         }
+
+        static void PatientList(string[] args)
+        {
+            Patient p1 = new Patient("Stone, Travis", 10874);
+            Patient p2 = new Patient("Jones, Angel", 15823);
+            Patient p3 = new Patient("Hamilton, Thomas", 12561);
+            Patient p4 = new Patient("Kipnis, Jason", 16810);
+            Patient p5 = new Patient("Kluber, Bridget", 108945);
+        }
+
+        public void Patient2(){
+            }
     }
 }

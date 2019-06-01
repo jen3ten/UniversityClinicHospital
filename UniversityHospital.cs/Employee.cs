@@ -16,5 +16,6 @@ namespace UniversityHospital.cs
             EmployeeNumber = number;
             Salary = salary;
         }
+
     }
 }
