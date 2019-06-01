@@ -6,5 +6,6 @@ namespace UniversityHospital.cs
 {
     class Payroll
     {
+        List<Payroll> employeeList = new List<Payroll>();
     }
 }
