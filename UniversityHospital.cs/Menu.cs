@@ -7,6 +7,7 @@ namespace UniversityHospital.cs
     class Menu
     {
         bool start = true;
+        Payroll payroll;
 
 
         public void MainMenu()
@@ -25,7 +26,9 @@ namespace UniversityHospital.cs
                 Console.WriteLine(" 7.  Quit");
                 int menuResponse = Convert.ToInt32(Console.ReadLine());
 
-                if (menuResponse.Equals(6))
+                payroll = new Payroll(); //I think this is where we need to reference it to get the add list method to work, but I'm still having trouble getting it to run
+
+                if (menuResponse.Equals(7))
                 {
                     start = false;
                 }
@@ -43,6 +46,7 @@ namespace UniversityHospital.cs
                     case 5:
                         break;
                     case 6:
+                        payroll.EmployeeList();
                         break;
                     case 7:
                         break;

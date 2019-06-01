@@ -10,8 +10,9 @@ namespace UniversityHospital.cs
         public int EmployeeNumber { get; set; }
         public int Salary { get; set; }
         public string Position { get; set; }
+        public string SalaryPaid { get; set; }
 
-        Payroll payroll = new Payroll();
+        /*Payroll payroll = new Payroll();
 
         public Employee(string name)
         {
@@ -30,7 +31,7 @@ namespace UniversityHospital.cs
             Salary = salary;
         }
        
-        public virtual void GetNameEmployeeNumber()
+        public virtual void GetNameEmployeeNumber()*/
 
 
     }

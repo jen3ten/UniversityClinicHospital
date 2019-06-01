@@ -28,7 +28,8 @@ namespace UniversityHospital.cs
             Patient p5 = new Patient("Kluber, Bridget", 108945);
         }
 
-        public void Patient2(){
-            }
+        public void Patient2()
+        {
+        }
     }
 }

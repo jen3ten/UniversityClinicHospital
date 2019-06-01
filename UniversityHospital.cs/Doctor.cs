@@ -7,9 +7,22 @@ namespace UniversityHospital.cs
     public class Doctor : Employee
 
     {
-        
-        public int NumberOfPatients { get; set; }
-        Payroll payroll = new Payroll();
+
+        //public int NumberOfPatients { get; set; }
+        public string SpecialtyArea { get; set; }
+
+        public Doctor(string name, int number, string specialty) : base()
+        {
+            Position = "Doctor";
+            Salary = 90000;
+            SpecialtyArea = specialty;
+            Name = name;
+            EmployeeNumber = number;
+            //NumberOfPatients = 8 -- I don't know where we want to set that value.
+            //SalaryPaid = false;
+        }
+
+        /*Payroll payroll = new Payroll();
 
         public Doctor(string name) : base()  // having trouble w argument- following ex in practice inheritance we did in class... After we get this part everything else should fall through
         {
@@ -26,5 +39,6 @@ namespace UniversityHospital.cs
             //Doctor dr3 = new Doctor("Dolson, Miranda", 8497, "");
             //Doctor dr4 = new Doctor("Sandhu, Cory", 8109, "");
             //Doctor dr5 = new Doctor("Messaros, Kyle", 8670, "");
+    }*/
     }
 }

@@ -7,8 +7,8 @@ namespace UniversityHospital.cs
         static void Main(string[] args)
         {
 
-            Employee employee = new Employee("");
-            employee.name(); 
+            //Employee employee = new Employee();
+            //employee.Name(); 
             Menu menu = new Menu();
             menu.MainMenu();
         }

@@ -8,7 +8,7 @@ namespace UniversityHospital.cs
     {
         public int NumberOfPatients { get; set;  }
 
-        public Nurse() : base("")
+        public Nurse() : base()
         {
             NumberOfPatients = 8;
         }
