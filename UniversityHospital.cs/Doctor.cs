@@ -21,6 +21,7 @@ namespace UniversityHospital.cs
             //SalaryPaid = false;
         }
 
+
         
     }
 }

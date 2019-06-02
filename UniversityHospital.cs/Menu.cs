@@ -8,6 +8,7 @@ namespace UniversityHospital.cs
     {
         bool start = true;
         Payroll payroll;
+        Doctor doctor;
 
 
         public void MainMenu()
@@ -27,7 +28,7 @@ namespace UniversityHospital.cs
                 int menuResponse = Convert.ToInt32(Console.ReadLine());
 
                 payroll = new Payroll(); //I think this is where we need to reference it to get the add list method to work, but I'm still having trouble getting it to run
-
+                
 
                 if (menuResponse.Equals(7))
                 {
@@ -45,7 +46,10 @@ namespace UniversityHospital.cs
                     case 4:
                         break;
                     case 5:
-                        payroll.DoctorList();
+
+                  payroll.AddEmployeeToList();
+                  payroll.DoctorList();
+                
                         break;
                     case 6:
                         payroll.AddEmployeeToList();

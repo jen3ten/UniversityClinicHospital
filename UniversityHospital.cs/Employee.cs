@@ -14,6 +14,15 @@ namespace UniversityHospital.cs
         public string NumberOfPatients { get; set; } 
         
 
+
+
+
+
+
+
+
+
+
         /*Payroll payroll = new Payroll();
 
         public Employee(string name)
