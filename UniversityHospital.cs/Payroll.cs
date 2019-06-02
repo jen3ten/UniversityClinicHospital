@@ -12,12 +12,12 @@ namespace UniversityHospital.cs
         public List<Receptionist> receptionistList = new List<Receptionist>();
         
 
-        Doctor dr1 = new Doctor("Francona, Terry", 8561, "Gastroenterology", "12");
-        Doctor dr2 = new Doctor("Roth, Elise", 8213, "Neuro Surgeon", "5");
-        Doctor dr3 = new Doctor("Dolson, Miranda", 8497, "Obstetrics\t", "16");
-        Doctor dr4 = new Doctor("Sandhu, Cory", 8109, "Pediatrics\t", "11");
-        Doctor dr5 = new Doctor("Messaros, Kyle", 8670, "Oncology\t", "8"); 
-
+        Doctor dr1 = new Doctor("Francona, Terry", 8561, "Gastroenterology", "N/A");
+        Doctor dr2 = new Doctor("Roth, Elise", 8213, "Neuro Surgeon", "N/A");
+        Doctor dr3 = new Doctor("Dolson, Miranda", 8497, "Obstetrics\t", "N/A");
+        Doctor dr4 = new Doctor("Sandhu, Cory", 8109, "Pediatrics\t", "N/A");
+        Doctor dr5 = new Doctor("Messaros, Kyle", 8670, "Oncology\t", "N/A"); 
+        /// Number of patient were in the requirements for Nurses only
         Nurse n1 = new Nurse("Marshall, Ruby", 7512, "--", "21");
         Nurse n2 = new Nurse("Basiba, John", 7734, "--", "11");
         Nurse n3 = new Nurse("Kacy, Michael", 7298, "--", "9");
@@ -39,6 +39,7 @@ namespace UniversityHospital.cs
         Receptionist r1 = new Receptionist("Balou, Mary", 1058, "\tNo", "N/A");
         Receptionist r2 = new Receptionist("Lazara, Kim", 1058, "\tYes", "N/A");
         
+
         public void AddDoctorToList()
         {
             doctorList.Add(dr1);
@@ -77,7 +78,6 @@ namespace UniversityHospital.cs
             receptionistList.Add(r1);
             receptionistList.Add(r2);
         }
-
 
 
 
