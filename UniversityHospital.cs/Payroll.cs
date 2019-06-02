@@ -10,7 +10,7 @@ namespace UniversityHospital.cs
         public List<Nurse> nurseList = new List<Nurse>();
         public List<Janitor> janitorList = new List<Janitor>();
         public List<Receptionist> receptionistList = new List<Receptionist>();
-        
+        public List<Patient> patientList = new List<Patient>();
 
         Doctor dr1 = new Doctor("Francona, Terry", 8561, "Gastroenterology", "N/A");
         Doctor dr2 = new Doctor("Roth, Elise\t", 8213, "Neuro Surgeon", "N/A");
@@ -38,7 +38,12 @@ namespace UniversityHospital.cs
 
         Receptionist r1 = new Receptionist("Balou, Mary\t", 1058, "No ", "N/A");
         Receptionist r2 = new Receptionist("Lazara, Kim\t", 1058, "Yes", "N/A");
-        
+
+        Patient p1 = new Patient("Stone, Travis", 10874);
+        Patient p2 = new Patient("Jones, Angel", 15823);
+        Patient p3 = new Patient("Hamilton, Thomas", 12561);
+        Patient p4 = new Patient("Kipnis, Jason", 16810);
+        Patient p5 = new Patient("Kluber, Bridget", 10894);
 
         public void AddDoctorToList()
         {
@@ -79,6 +84,14 @@ namespace UniversityHospital.cs
             receptionistList.Add(r2);
         }
 
+        public void AddPatientToList()
+        {
+            patientList.Add(p1);
+            patientList.Add(p2);
+            patientList.Add(p3);
+            patientList.Add(p4);
+            patientList.Add(p5);
+        }
 
 
         public void EmployeeList()
@@ -157,6 +170,41 @@ namespace UniversityHospital.cs
             Console.WriteLine(" ");
         }
 
+        public void PatientList()
+        {
 
+            // Console.WriteLine("\n----Employee-- Non Patient Interaction-- List:");
+            Console.WriteLine("Patient Name\t\t| Patient Number |  Health Level |  Blood Level   |");
+            Console.WriteLine("-------------------|--------|------------|-------------|");
+
+            AddPatientToList();
+
+            int i = 1;
+            foreach (Patient element in patientList)
+            {
+                Console.WriteLine($"{i++}. {element.Name} \t|  {element.PatientNumber}  |     {element.HealthLevel}    |    {element.BloodLevel}       |");
+            }
+
+            Console.WriteLine(" ");
+        }
+
+
+        public void FireDoctor(Doctor doctor)
+        {
+            doctorList.Remove(doctor);
+        }
+
+        public void FireNurse(Nurse nurse)
+        {
+            nurseList.Remove(nurse);
+        }
+        public void FireReceptionist(Receptionist receptionist)
+        {
+            receptionistList.Remove(receptionist);
+        }
+        public void FireJanitor(Janitor janitor)
+        {
+            janitorList.Remove(janitor);
+        }
     }
 }
