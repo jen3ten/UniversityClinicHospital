@@ -109,17 +109,40 @@ namespace UniversityHospital.cs
         public void DoctorList()
         {
 
-            Console.WriteLine("\n\tDoctor List:\n");
-            Console.WriteLine("EmployeeName\t  | Number | Specialty\t\t| # of Patients |");
+            Console.WriteLine("\n----Employee -- Patient Interaction -- List:");
+            Console.WriteLine("Employee Name\t  | Number | Specialty\t\t| # of Patients |");
             Console.WriteLine("------------------|--------|--------------------|---------------|");
          
             foreach (Doctor element in doctorList) //This causes the program to crash once it reaches the janitor values
             {
-                Console.WriteLine($"{element.Name}\t  |  {element.EmployeeNumber}  | {element.SpecialtyArea}\t| {element.NumberOfPatients} \t\t|");
+                Console.WriteLine($"{element.Name}\t  |  {element.EmployeeNumber}  | {element.SpecialtyArea}\t| \t{element.NumberOfPatients} \t|");
+            }
+            foreach(Nurse element in nurseList)
+            {
+                Console.WriteLine($"{element.Name}\t  |  {element.EmployeeNumber}  |\t--\t{element.SpecialtyArea}\t| \t{element.NumberOfPatients} \t|");
+
             }
             Console.WriteLine(" ");
-            Console.ReadLine();
         }
+
+        public void JanitorAndReceptionList()
+        {
+
+            Console.WriteLine("\n----Employee-- Non Patient Interaction-- List:");
+            Console.WriteLine("Employee Name\t  | Number |  Sweeping  |  On Phone     |");
+            Console.WriteLine("------------------|--------|------------|---------------|");
+
+            foreach (Janitor element in janitorList) //This causes the program to crash once it reaches the janitor values
+            {
+                Console.WriteLine($"{element.Name}\t  |  {element.EmployeeNumber}  | {element.Sweep}\t| \t--\t|");
+            }
+            foreach(Receptionist element in receptionistList)
+            {
+                Console.WriteLine($"{element.Name}\t  |  {element.EmployeeNumber}  | \t--\t| {element.OnPhone}\t|");
+            }
+            Console.WriteLine(" ");
+        }
+
 
     }
 }
