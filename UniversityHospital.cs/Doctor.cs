@@ -7,6 +7,7 @@ namespace UniversityHospital.cs
     public class Doctor : Employee
 
     {
+        Patient patient;
 
         public string SpecialtyArea { get; set; }
 
@@ -33,6 +34,20 @@ namespace UniversityHospital.cs
                 Console.WriteLine($"{Name} has already been paid.");
             }
         }
+
+        public override void BloodDraw()
+        {
+            patient.BloodLevel-=2;
+            patient.HealthLevel+=3;
+        }
+
+        public override void CarePatient()
+        {
+            patient.BloodLevel+=2;
+            patient.HealthLevel+=2;
+        }
+
+
 
     }
 }
