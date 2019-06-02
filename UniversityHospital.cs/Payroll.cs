@@ -87,6 +87,11 @@ namespace UniversityHospital.cs
             Console.WriteLine("Employee Name\t\t| Position\t|  Number |  Salary\t|  Paid     |");
             Console.WriteLine("------------------------|---------------|---------|-------------|-----------|");
 
+            AddDoctorToList();
+            AddNurseToList();
+            AddJanitorToList();
+            AddReceptionistToList();
+
             int i = 1;
             foreach (Doctor element in doctorList)
             {
@@ -107,12 +112,15 @@ namespace UniversityHospital.cs
             Console.WriteLine(" ");
         }
 
-        public void DoctorList()
+        public void DoctorAndNurseList()
         {
 
             Console.WriteLine("\n----Employee -- Patient Interaction -- List:");
             Console.WriteLine("Employee Name\t\t| Number | Specialty\t\t| # of Patients |");
             Console.WriteLine("------------------------|--------|----------------------|---------------|");
+
+            AddDoctorToList();
+            AddNurseToList();
 
             int i = 1;
             foreach (Doctor element in doctorList)
@@ -133,6 +141,9 @@ namespace UniversityHospital.cs
             Console.WriteLine("\n----Employee-- Non Patient Interaction-- List:");
             Console.WriteLine("Employee Name\t\t| Number |  Sweeping  |  On Phone   |");
             Console.WriteLine("------------------------|--------|------------|-------------|");
+
+            AddReceptionistToList();
+            AddJanitorToList();
 
             int i = 1;
             foreach (Janitor element in janitorList)
