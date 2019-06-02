@@ -9,14 +9,18 @@ namespace UniversityHospital.cs
         bool start = true;
         Doctor doctor;
         Patient patient;
-       
-
 
 
 
         public void MainMenu()
         {
             Console.WriteLine("Welcome to Univserity Hospitals Database!");
+            Payroll payroll = new Payroll();
+            payroll.AddDoctorToList();
+            payroll.AddNurseToList();
+            payroll.AddJanitorToList();
+            payroll.AddReceptionistToList();
+
 
             do
             {
@@ -33,7 +37,6 @@ namespace UniversityHospital.cs
 
                 // STILL WORKING ON THIS, NEEDED TO REARRANGE SOME THINGS TO HAVE LIST MAKE SENSE. 
 
-                Payroll payroll = new Payroll(); //I think this is where we need to reference it to get the add list method to work, but I'm still having trouble getting it to run
 
 
                 if (menuResponse.Equals(6))

@@ -100,11 +100,6 @@ namespace UniversityHospital.cs
             Console.WriteLine("Employee Name\t\t| Position\t|  Number |  Salary\t|  Paid     |");
             Console.WriteLine("------------------------|---------------|---------|-------------|-----------|");
 
-            AddDoctorToList();
-            AddNurseToList();
-            AddJanitorToList();
-            AddReceptionistToList();
-
             int i = 1;
             foreach (Doctor element in doctorList)
             {
@@ -173,7 +168,6 @@ namespace UniversityHospital.cs
         public void PatientList()
         {
 
-            // Console.WriteLine("\n----Employee-- Non Patient Interaction-- List:");
             Console.WriteLine("Patient Name\t\t| Patient Number |  Health Level |  Blood Level   |");
             Console.WriteLine("-------------------|--------|------------|-------------|");
 
