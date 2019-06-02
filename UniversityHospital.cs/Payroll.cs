@@ -14,10 +14,20 @@ namespace UniversityHospital.cs
         Doctor dr4 = new Doctor("Sandhu, Cory", 8109, "Pediatrics\t", "11");
         Doctor dr5 = new Doctor("Messaros, Kyle", 8670, "Oncology\t", "8");
 
-        Janitor j1 = new Janitor("Smith, Matthew", 3561, "\tYes");
-        Janitor j2 = new Janitor("Watt, Jonathan", 3213, "\tNo");
 
         Nurse n1 = new Nurse("Marshall, Ruby", 7512, "--", "21");
+        Nurse n2 = new Nurse("Basiba, John", 7734, "--", "11");
+        Nurse n3 = new Nurse("Kacy, Michael", 7298, "--", "9");
+        Nurse n4 = new Nurse("Maxwell, Linda", 7181, "--", "14");
+        Nurse n5 = new Nurse("Johns, Nicole", 7604, "--", "8");
+        Nurse n6 = new Nurse("Medina, Cindy", 7155, "--", "17");
+        Nurse n7 = new Nurse("Listner, Casey", 7640, "--", "23");
+
+        Janitor j1 = new Janitor("Smith, Matthew", 3561, "\tYes", "N/A");
+        Janitor j2 = new Janitor("Watt, Jonathan", 3213, "\tNo", "N/A");
+        Janitor j3 = new Janitor("Muller, Walter", 3629, "\tNo", "N/A");
+        Janitor j4 = new Janitor("Madison, Jim", 3462, "\tYes", "N/A");
+        Janitor j5 = new Janitor("Harrison, Lloyd", 3901, "\tNo", "N/A");
 
         public void AddEmployeeToList()
         {
@@ -26,9 +36,18 @@ namespace UniversityHospital.cs
             employeeList.Add(dr3);
             employeeList.Add(dr4);
             employeeList.Add(dr5);
+            employeeList.Add(n1);
+            employeeList.Add(n2);
+            employeeList.Add(n3);
+            employeeList.Add(n4);
+            employeeList.Add(n5);
+            employeeList.Add(n6);
+            employeeList.Add(n7);
             employeeList.Add(j1);
             employeeList.Add(j2);
-            employeeList.Add(n1);
+            employeeList.Add(j3);
+            employeeList.Add(j4);
+            employeeList.Add(j5);
         }
 
         public void EmployeeList()
