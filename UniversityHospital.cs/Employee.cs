@@ -6,17 +6,13 @@ namespace UniversityHospital.cs
 {
     public class Employee
     {
+        Patient patient;
         public string Name { get; set; }
         public int EmployeeNumber { get; set; }
-        public int Salary { get; set; }
-        public string Position
-
-        public Employee(string name, int number, string position)
-        {
-            Name = name;
-            EmployeeNumber = number;
-            Position = position;
-        }
+        public string Salary { get; set; }
+        public string Position { get; set; }
+        public string SalaryPaid { get; set; }
+        public string NumberOfPatients { get; set; }
 
     }
 }

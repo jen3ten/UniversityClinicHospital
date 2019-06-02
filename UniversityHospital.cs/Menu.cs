@@ -7,6 +7,7 @@ namespace UniversityHospital.cs
     public class Menu
     {
         bool start = true;
+        Payroll payroll;
 
 
         public void MainMenu()
@@ -25,6 +26,9 @@ namespace UniversityHospital.cs
                 Console.WriteLine(" 7.  Quit");
                 int menuResponse = Convert.ToInt32(Console.ReadLine());
 
+
+                payroll = new Payroll(); //I think this is where we need to reference it to get the add list method to work, but I'm still having trouble getting it to run
+
                 if (menuResponse.Equals(7))
                 {
                     start = false;
@@ -41,8 +45,12 @@ namespace UniversityHospital.cs
                     case 4:
                         break;
                     case 5:
+                        payroll.AddEmployeeToList();
+                        payroll.NurseList();
                         break;
                     case 6:
+                        payroll.AddEmployeeToList();
+                        payroll.EmployeeList();
                         break;
                     case 7:
                         break;
@@ -50,7 +58,6 @@ namespace UniversityHospital.cs
                         Console.WriteLine("Please enter a value between \"1\" and \"6\"");
                         break;
                 }
-                Console.Clear();
             } while (start);
         }
 
