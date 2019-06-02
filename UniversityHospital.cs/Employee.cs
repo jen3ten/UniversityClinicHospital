@@ -13,11 +13,8 @@ namespace UniversityHospital.cs
         public string NumberOfPatients { get; set; }
         public bool Payment { get; set; }
 
-
         public abstract void PaySalary();
         public abstract void BloodDraw();
         public abstract void CarePatient();
-
-
     }
 }

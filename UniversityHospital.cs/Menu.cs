@@ -63,9 +63,7 @@ namespace UniversityHospital.cs
                         switch (menuResponse2)
                         {
                             case 1://select a Doctor or Nurse to take care of patient
-                             payroll.AddDoctorToList();
-                             payroll.AddNurseToList();
-                             payroll.DoctorList();
+                             payroll.DoctorAndNurseList();
                                 Console.WriteLine("These are the Doctors and Nurses currently avaliable.\n" +
                                                     "Select a Doctor or Nurse to take care of patient");
 
@@ -90,8 +88,6 @@ namespace UniversityHospital.cs
 
                                 break;
                             case 2://Avaliability of Recep or Jan
-                        payroll.AddReceptionistToList();
-                        payroll.AddJanitorToList();
                         payroll.JanitorAndReceptionList();
                                 Console.WriteLine("");
                                 break;
@@ -103,10 +99,6 @@ namespace UniversityHospital.cs
                         //payroll.DoctorList();
                 
                     case 6:
-                        payroll.AddNurseToList();
-                        payroll.AddDoctorToList();                          
-                        payroll.AddJanitorToList();
-                        payroll.AddReceptionistToList();
                         payroll.EmployeeList();
                         break;
                     case 7:

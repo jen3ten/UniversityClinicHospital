@@ -46,8 +46,5 @@ namespace UniversityHospital.cs
             patient.BloodLevel+=2;
             patient.HealthLevel+=2;
         }
-
-
-
     }
 }
