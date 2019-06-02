@@ -8,7 +8,7 @@ namespace UniversityHospital.cs
     {
         public string Sweep { get; set; }
 
-        public Janitor(string name, int number, string sweep, string patientNumber) : base()
+        public Janitor(string name, int number, string sweep) : base()
         {
             Name = name;
             EmployeeNumber = number;
@@ -30,6 +30,12 @@ namespace UniversityHospital.cs
             {
                 Console.WriteLine($"{Name} has already been paid.");
             }
+        }
+        public override void BloodDraw()
+        {
+        }
+        public override void CarePatient()
+        {
         }
     }
 }

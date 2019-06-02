@@ -15,5 +15,9 @@ namespace UniversityHospital.cs
 
 
         public abstract void PaySalary();
+        public abstract void BloodDraw();
+        public abstract void CarePatient();
+
+
     }
 }
