@@ -9,6 +9,7 @@ namespace UniversityHospital.cs
         bool start = true;
         Payroll payroll;
         Doctor doctor;
+        Patient patient;
 
 
 
@@ -28,7 +29,6 @@ namespace UniversityHospital.cs
                 Console.WriteLine(" 7.  Quit");
                 int menuResponse = Convert.ToInt32(Console.ReadLine());
 
-                int menuResponse2 = Convert.ToInt32(Console.ReadLine());
 
                 //int menuResponse3 = Convert.ToInt32(Console.ReadLine());
 
@@ -49,24 +49,49 @@ namespace UniversityHospital.cs
                     case 2:
                         break;
                     case 3:
-                        payroll.AddReceptionistToList();
-                        payroll.AddJanitorToList();
                         break;
                         //Non patient
                     case 4:
                          
                         break;
-                        //Patient 
-                    case 5:
+                       
+                    case 5://Inform Doctor or Nurse of Patient Need
+                                Console.WriteLine("1. Inform Doctor or Nurse of Patient Need\n" +
+                                                     "2. Review Receptionists and Janitors' Status'" );
+                                
+                        int menuResponse2 = Convert.ToInt32(Console.ReadLine());
                         switch (menuResponse2)
                         {
                             case 1://select a Doctor or Nurse to take care of patient
-                                Console.WriteLine("Select a Doctor or Nurse to take care of patient");
-                                payroll.DoctorList();
-                                payroll.AddNurseToList();
-                                payroll.EmployeeList();
+                             payroll.AddDoctorToList();
+                             payroll.AddNurseToList();
+                             payroll.DoctorList();
+                                Console.WriteLine("These are the Doctors and Nurses currently avaliable.\n" +
+                                                    "Select a Doctor or Nurse to take care of patient");
+
+                                int menuResponse3 = Convert.ToInt32(Console.ReadLine());
+                                switch (menuResponse3)
+                                {
+                                    case 1:
+                                    patient.AddPatientToList();              
+                                    Console.WriteLine("Which Patient would you like to draw blood from?");
+                                        //Create index to select from Doctor and Nurse List
+
+                                        int menuResponse4 = Convert.ToInt32(Console.ReadLine());
+                                        switch (menuResponse4)
+                                        {
+                                            case 1:
+                                                break;
+                                        }
+                                        break;
+              
+                                }
+                                //payroll.AddNurseToList();
+
                                 break;
                             case 2://Avaliability of Recep or Jan
+                        payroll.AddReceptionistToList();
+                        payroll.AddJanitorToList();
                         payroll.JanitorAndReceptionList();
                                 Console.WriteLine("");
                                 break;
@@ -78,9 +103,7 @@ namespace UniversityHospital.cs
                         //payroll.DoctorList();
                 
                     case 6:
-                        payroll.AddDoctorToList();
                         payroll.AddJanitorToList();
-                        payroll.AddNurseToList();
                         payroll.AddReceptionistToList();
                         payroll.EmployeeList();
                         break;
