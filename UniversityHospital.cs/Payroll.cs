@@ -98,11 +98,11 @@ namespace UniversityHospital.cs
             }
             foreach(Janitor element in janitorList)
             {
-                Console.WriteLine($"{i++}. {element.Name}\t| {element.Position}\t|  {element.EmployeeNumber}   | {element.Salary}\t|    {element.Sweep}    |\t--\t");
+                Console.WriteLine($"{i++}. {element.Name}\t| {element.Position}\t|  {element.EmployeeNumber}   | {element.Salary}\t|    {element.Sweep}    | \t--      |");
             }
             foreach(Receptionist element in receptionistList)
             {
-                Console.WriteLine($"{i++}. {element.Name}\t| {element.Position}\t|  {element.EmployeeNumber}   | {element.Salary}\t|    {element.OnPhone}    |");
+                Console.WriteLine($"{i++}. {element.Name}\t| {element.Position}\t|  {element.EmployeeNumber}   | {element.Salary}\t|    --     |   {element.OnPhone}     |");
             }
             Console.WriteLine(" ");
         }
@@ -112,7 +112,7 @@ namespace UniversityHospital.cs
 
             Console.WriteLine("\n----Employee -- Patient Interaction -- List:");
             Console.WriteLine("Employee Name\t\t| Number | Specialty\t\t| # of Patients |");
-            Console.WriteLine("------------------------|--------|--------------------|---------------|");
+            Console.WriteLine("------------------------|--------|----------------------|---------------|");
 
             int i = 1;
             foreach (Doctor element in doctorList) //This causes the program to crash once it reaches the janitor values
@@ -131,17 +131,17 @@ namespace UniversityHospital.cs
         {
 
             Console.WriteLine("\n----Employee-- Non Patient Interaction-- List:");
-            Console.WriteLine("Employee Name\t  | Number |  Sweeping  |  On Phone     |");
-            Console.WriteLine("------------------|--------|------------|---------------|");
+            Console.WriteLine("Employee Name\t\t| Number |  Sweeping  |  On Phone   |");
+            Console.WriteLine("------------------------|--------|------------|-------------|");
 
             int i = 1;
             foreach (Janitor element in janitorList) //This causes the program to crash once it reaches the janitor values
             {
-                Console.WriteLine($"{i++}. {element.Name}\t  |  {element.EmployeeNumber}  | {element.Sweep}\t| \t--\t|");
+                Console.WriteLine($"{i++}. {element.Name}\t|  {element.EmployeeNumber}  |     {element.Sweep}    |    --       |");
             }
             foreach(Receptionist element in receptionistList)
             {
-                Console.WriteLine($"{i++}. {element.Name}\t  |  {element.EmployeeNumber}  | \t--\t| {element.OnPhone}\t|");
+                Console.WriteLine($"{i++}. {element.Name}\t|  {element.EmployeeNumber}  | \t--    |    {element.OnPhone}      |");
             }
             Console.WriteLine(" ");
         }
