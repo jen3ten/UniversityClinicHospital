@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UniversityHospital.cs
 {
-    class Receptionist : Employee
+    public class Receptionist : Employee
     {
 
         public string OnPhone { get; set; }
@@ -17,9 +17,20 @@ namespace UniversityHospital.cs
             OnPhone = phone;
             Position = "Receptionist";
             NumberOfPatients = patientNumber;
+            Payment = false;
         }
 
-        //static function in this class
-
+        public override void PaySalary()
+        {
+            if (Payment == false)
+            {
+                Console.WriteLine($"You have paid {Name} {Salary}");
+                Payment = true;
+            }
+            else
+            {
+                Console.WriteLine($"{Name} has already been paid.");
+            }
+        }
     }
 }

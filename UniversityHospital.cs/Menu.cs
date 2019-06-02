@@ -46,13 +46,15 @@ namespace UniversityHospital.cs
                     case 4:
                         break;
                     case 5:
-
-                  payroll.AddEmployeeToList();
-                  payroll.DoctorList();
+                        payroll.AddDoctorToList();
+                        payroll.DoctorList();
                 
                         break;
                     case 6:
-                        payroll.AddEmployeeToList();
+                        payroll.AddDoctorToList();
+                        payroll.AddJanitorToList();
+                        payroll.AddNurseToList();
+                        payroll.AddReceptionistToList();
                         payroll.EmployeeList();
                         break;
                     case 7:
