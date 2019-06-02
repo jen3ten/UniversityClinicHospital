@@ -15,7 +15,6 @@ namespace UniversityHospital.cs
             Salary = "$40,000";
             Sweep = sweep;
             Position = "Janitor";
-            NumberOfPatients = patientNumber;
             Payment = false;
         }
 
