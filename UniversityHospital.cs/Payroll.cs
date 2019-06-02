@@ -32,9 +32,9 @@ namespace UniversityHospital.cs
         Janitor j1 = new Janitor("Smith, Matthew", 3561, "Yes");
         Janitor j2 = new Janitor("Watt, Jonathan", 3213, "No ");
         Janitor j3 = new Janitor("Muller, Walter", 3629, "No ");
-        Janitor j4 = new Janitor("Madison, Jim\t", 3462, "Yes");
+        Janitor j4 = new Janitor("Madison, Jim", 3462, "Yes");
         Janitor j5 = new Janitor("Harrison, Lloyd", 3901, "Yes");
-        Janitor j6 = new Janitor("Adams, Scott\t", 3764, "No ");
+        Janitor j6 = new Janitor("Adams, Scott", 3764, "No ");
 
         Receptionist r1 = new Receptionist("Balou, Mary\t", 1058, "No ", "N/A");
         Receptionist r2 = new Receptionist("Lazara, Kim\t", 1058, "Yes", "N/A");
@@ -83,26 +83,26 @@ namespace UniversityHospital.cs
 
         public void EmployeeList()
         {
-            Console.WriteLine("\n\tEmployee List:\n");
-            Console.WriteLine("Employee Name\t\t| Position\t|  Number |  Salary\t| Sweeping  | On Phone  |");
-            Console.WriteLine("------------------------|---------------|---------|-------------|-----------|-----------|");
+            Console.WriteLine("\n\t-----Employee List:-----");
+            Console.WriteLine("Employee Name\t\t| Position\t|  Number |  Salary\t|  Paid     |");
+            Console.WriteLine("------------------------|---------------|---------|-------------|-----------|");
 
             int i = 1;
             foreach (Doctor element in doctorList)
             {
-                Console.WriteLine($"{i++}. {element.Name}\t| {element.Position}\t|  {element.EmployeeNumber}   | {element.Salary}\t|");
+                Console.WriteLine($"{i++}. {element.Name}\t| {element.Position}\t|  {element.EmployeeNumber}   | {element.Salary}\t|   {element.Payment}   |");
             }
             foreach(Nurse element in nurseList)
             {
-                Console.WriteLine($"{i++}. {element.Name}\t| {element.Position}\t|  {element.EmployeeNumber}   | {element.Salary}\t|");
+                Console.WriteLine($"{i++}. {element.Name}\t| {element.Position}\t\t|  {element.EmployeeNumber}   | {element.Salary}\t|   {element.Payment}   |");
             }
             foreach(Janitor element in janitorList)
             {
-                Console.WriteLine($"{i++}. {element.Name}\t| {element.Position}\t|  {element.EmployeeNumber}   | {element.Salary}\t|    {element.Sweep}    | \t--      |");
+                Console.WriteLine($"{i++}. {element.Name}\t| {element.Position}\t|  {element.EmployeeNumber}   | {element.Salary}\t|   {element.Payment}   |");
             }
             foreach(Receptionist element in receptionistList)
             {
-                Console.WriteLine($"{i++}. {element.Name}\t| {element.Position}\t|  {element.EmployeeNumber}   | {element.Salary}\t|    --     |   {element.OnPhone}     |");
+                Console.WriteLine($"{i++}. {element.Name}\t| {element.Position}\t|  {element.EmployeeNumber}   | {element.Salary}\t|   {element.Payment}   |");
             }
             Console.WriteLine(" ");
         }
@@ -115,7 +115,7 @@ namespace UniversityHospital.cs
             Console.WriteLine("------------------------|--------|----------------------|---------------|");
 
             int i = 1;
-            foreach (Doctor element in doctorList) //This causes the program to crash once it reaches the janitor values
+            foreach (Doctor element in doctorList)
             {
                 Console.WriteLine($"{i++}. {element.Name}\t|  {element.EmployeeNumber}  | {element.SpecialtyArea}\t| \t{element.NumberOfPatients} \t|");
             }
@@ -135,9 +135,9 @@ namespace UniversityHospital.cs
             Console.WriteLine("------------------------|--------|------------|-------------|");
 
             int i = 1;
-            foreach (Janitor element in janitorList) //This causes the program to crash once it reaches the janitor values
+            foreach (Janitor element in janitorList)
             {
-                Console.WriteLine($"{i++}. {element.Name}\t|  {element.EmployeeNumber}  |     {element.Sweep}    |    --       |");
+                Console.WriteLine($"{i++}. {element.Name} \t|  {element.EmployeeNumber}  |     {element.Sweep}    |    --       |");
             }
             foreach(Receptionist element in receptionistList)
             {

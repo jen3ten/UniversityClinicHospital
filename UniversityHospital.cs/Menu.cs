@@ -103,6 +103,8 @@ namespace UniversityHospital.cs
                         //payroll.DoctorList();
                 
                     case 6:
+                        payroll.AddNurseToList();
+                        payroll.AddDoctorToList();                          
                         payroll.AddJanitorToList();
                         payroll.AddReceptionistToList();
                         payroll.EmployeeList();
