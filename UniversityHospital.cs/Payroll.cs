@@ -182,6 +182,19 @@ namespace UniversityHospital.cs
             Console.WriteLine(" ");
         }
 
+
+        /*public virtual void RemoveEmployee(Payroll employeeList)
+        {
+            EmployeeList();
+            Console.WriteLine("Please select an employee that has been let go.");
+            Payroll removeEmployee = employeeList[Convert.ToInt32(Console.ReadLine()) - 1];
+
+            Console.WriteLine($"\n{element.Name} has been let go.");
+
+            employeeList.Remove(removeEmployee);
+        }*/
+
+
         //***********8
         //public void FireDoctor(Doctor doctor)
         //{

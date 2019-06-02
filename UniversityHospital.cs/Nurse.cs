@@ -35,6 +35,7 @@ namespace UniversityHospital.cs
 
         public override void BloodDraw()
         {
+            foreach (Patient element in patientList)
             patient.BloodLevel--;
             patient.HealthLevel++;
         }

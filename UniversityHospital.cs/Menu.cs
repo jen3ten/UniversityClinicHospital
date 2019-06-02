@@ -49,7 +49,7 @@ namespace UniversityHospital.cs
                     case 1:
                         break;
                     case 2:
-                          payroll.EmployeeList();
+                        payroll.EmployeeList();
                         Console.WriteLine("Which employee will be let go?");
                         int menuResponse5 = Convert.ToInt32(Console.ReadLine());
                         switch (menuResponse5)
@@ -57,19 +57,18 @@ namespace UniversityHospital.cs
                             case 1:
                                 break;
                         }
-                        
 
                         break;
                        
                     case 3://Inform Doctor or Nurse of Patient Need
-                                Console.WriteLine("1. Inform Doctor or Nurse of Patient Need\n" +
-                                                     "2. Review Receptionists and Janitors' Status'" );
+                        Console.WriteLine("1. Inform Doctor or Nurse of Patient Need\n" +
+                                          "2. Review Receptionists and Janitors' Status'" );
                                 
                         int menuResponse2 = Convert.ToInt32(Console.ReadLine());
                         switch (menuResponse2)
                         {
                             case 1://select a Doctor or Nurse to take care of patient
-                             payroll.DoctorAndNurseList();
+                                payroll.DoctorAndNurseList();
                                 Console.WriteLine("These are the Doctors and Nurses currently avaliable.\n" +
                                                     "Select a Doctor or Nurse to draw blood sample");
 
@@ -77,8 +76,8 @@ namespace UniversityHospital.cs
                                 switch (menuResponse3)
                                 {
                                     case 1://Select Patient
-                                    payroll.PatientList();              
-                                    Console.WriteLine("Which patient should be assisted?");
+                                        payroll.PatientList();              
+                                        Console.WriteLine("Which patient should be assisted?");
                                         //Create index to select from Doctor and Nurse List
 
                                         int menuResponse4 = Convert.ToInt32(Console.ReadLine());
@@ -91,14 +90,13 @@ namespace UniversityHospital.cs
                                                 break;
                                         }
                                         break;
-              
                                 }
                                 break;
+
                             case 2://Recep and Janitor Stats
-                        payroll.JanitorAndReceptionList();
+                                payroll.JanitorAndReceptionList();
                                 Console.WriteLine("");
                                 break;
-
                         }
                         break;
                     case 4://payroll
