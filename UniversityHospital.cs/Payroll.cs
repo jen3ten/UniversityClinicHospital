@@ -19,7 +19,7 @@ namespace UniversityHospital.cs
         Doctor dr5 = new Doctor("Messaros, Kyle", 8670, "Oncology\t", "N/A"); 
         /// Number of patient were in the requirements for Nurses only
         Nurse n1 = new Nurse("Marshall, Ruby", 7512, "--", "21");
-        Nurse n2 = new Nurse("Basiba, John", 7734, "--", "11");
+        Nurse n2 = new Nurse("Basiba, John\t", 7734, "--", "11");
         Nurse n3 = new Nurse("Kacy, Michael", 7298, "--", "9");
         Nurse n4 = new Nurse("Maxwell, Linda", 7181, "--", "14");
         Nurse n5 = new Nurse("Johns, Nicole", 7604, "--", "8");
@@ -29,15 +29,15 @@ namespace UniversityHospital.cs
         Nurse n9 = new Nurse("Richards, Mason", 7371, "--", "20");
         Nurse n10 = new Nurse("Smith, Jessica", 7492, "--", "13");
 
-        Janitor j1 = new Janitor("Smith, Matthew", 3561, "\tYes", "N/A");
-        Janitor j2 = new Janitor("Watt, Jonathan", 3213, "\tNo", "N/A");
-        Janitor j3 = new Janitor("Muller, Walter", 3629, "\tNo", "N/A");
-        Janitor j4 = new Janitor("Madison, Jim", 3462, "\tYes", "N/A");
-        Janitor j5 = new Janitor("Harrison, Lloyd", 3901, "\tYes", "N/A");
-        Janitor j6 = new Janitor("Adams, Scott", 3764, "\tNo", "N/A");
+        Janitor j1 = new Janitor("Smith, Matthew", 3561, "Yes");
+        Janitor j2 = new Janitor("Watt, Jonathan", 3213, "No ");
+        Janitor j3 = new Janitor("Muller, Walter", 3629, "No ");
+        Janitor j4 = new Janitor("Madison, Jim\t", 3462, "Yes");
+        Janitor j5 = new Janitor("Harrison, Lloyd", 3901, "Yes");
+        Janitor j6 = new Janitor("Adams, Scott\t", 3764, "No ");
 
-        Receptionist r1 = new Receptionist("Balou, Mary", 1058, "\tNo", "N/A");
-        Receptionist r2 = new Receptionist("Lazara, Kim", 1058, "\tYes", "N/A");
+        Receptionist r1 = new Receptionist("Balou, Mary\t", 1058, "No ", "N/A");
+        Receptionist r2 = new Receptionist("Lazara, Kim\t", 1058, "Yes", "N/A");
         
 
         public void AddDoctorToList()
@@ -84,8 +84,8 @@ namespace UniversityHospital.cs
         public void EmployeeList()
         {
             Console.WriteLine("\n\tEmployee List:\n");
-            Console.WriteLine("Employee Name\t | Position\t|  Number |  Salary\t|");
-            Console.WriteLine("-----------------|--------------|---------|-------------|");
+            Console.WriteLine("Employee Name\t\t| Position\t|  Number |  Salary\t| Sweeping  | On Phone  |");
+            Console.WriteLine("------------------------|---------------|---------|-------------|-----------|-----------|");
 
             int i = 1;
             foreach (Doctor element in doctorList)
@@ -98,11 +98,11 @@ namespace UniversityHospital.cs
             }
             foreach(Janitor element in janitorList)
             {
-                Console.WriteLine($"{i++}. {element.Name}\t| {element.Position}\t|  {element.EmployeeNumber}   | {element.Salary}\t|");
+                Console.WriteLine($"{i++}. {element.Name}\t| {element.Position}\t|  {element.EmployeeNumber}   | {element.Salary}\t|    {element.Sweep}    |\t--\t");
             }
             foreach(Receptionist element in receptionistList)
             {
-                Console.WriteLine($"{i++}. {element.Name}\t| {element.Position}\t|  {element.EmployeeNumber}   | {element.Salary}\t|");
+                Console.WriteLine($"{i++}. {element.Name}\t| {element.Position}\t|  {element.EmployeeNumber}   | {element.Salary}\t|    {element.OnPhone}    |");
             }
             Console.WriteLine(" ");
         }

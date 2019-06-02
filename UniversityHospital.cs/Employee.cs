@@ -6,7 +6,6 @@ namespace UniversityHospital.cs
 {
     public abstract class Employee
     {
-        Patient patient;
         public string Name { get; set; }
         public int EmployeeNumber { get; set; }
         public string Salary { get; set; }
