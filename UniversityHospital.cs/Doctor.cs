@@ -39,6 +39,7 @@ namespace UniversityHospital.cs
         {
             patient.BloodLevel-=2;
             patient.HealthLevel+=3;
+            Console.WriteLine("Blood sample has been drawn and sent to the lab for testing.");
         }
 
         public override void CarePatient()
@@ -47,19 +48,20 @@ namespace UniversityHospital.cs
             patient.HealthLevel+=2;
         }
 
-        public Doctor ChooseEmployee(Payroll payroll)
-        {
-            int i = 0;
-            foreach (var employee in payroll.doctorList)
-            {
-                i = i + 1;
-                Console.WriteLine($"{i}. {employee.Name}");
-            }
-            int choice = Convert.ToInt32(Console.ReadLine());
-            choice--;
-            Console.WriteLine($"You have chosen {payroll.doctorList[choice].Name}");
-            return payroll.doctorList[choice];
-        }
+        //**********
+        //public Doctor ChooseEmployee(Payroll payroll)
+        //{
+        //    int i = 0;
+        //    foreach (var employee in payroll.doctorList)
+        //    {
+        //        i = i + 1;
+        //        Console.WriteLine($"{i}. {employee.Name}");
+        //    }
+        //    int choice = Convert.ToInt32(Console.ReadLine());
+        //    choice--;
+        //    Console.WriteLine($"You have chosen {payroll.doctorList[choice].Name}");
+        //    return payroll.doctorList[choice];
+        //}
     }
 
 }

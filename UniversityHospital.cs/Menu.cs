@@ -7,7 +7,6 @@ namespace UniversityHospital.cs
     public class Menu
     {
         bool start = true;
-        Payroll payroll = new Payroll();
         Doctor doctor;
         Patient patient;
        
@@ -34,7 +33,7 @@ namespace UniversityHospital.cs
 
                 // STILL WORKING ON THIS, NEEDED TO REARRANGE SOME THINGS TO HAVE LIST MAKE SENSE. 
 
-                payroll = new Payroll(); //I think this is where we need to reference it to get the add list method to work, but I'm still having trouble getting it to run
+                Payroll payroll = new Payroll(); //I think this is where we need to reference it to get the add list method to work, but I'm still having trouble getting it to run
 
 
                 if (menuResponse.Equals(6))
@@ -47,9 +46,15 @@ namespace UniversityHospital.cs
                     case 1:
                         break;
                     case 2:
-                        payroll.EmployeeList();
-                        payroll.FireDoctor(doctor);
-                        doctor = doctor.ChooseEmployee(payroll);
+                          payroll.EmployeeList();
+                        Console.WriteLine("Which employee will be let go?");
+                        int menuResponse5 = Convert.ToInt32(Console.ReadLine());
+                        switch (menuResponse5)
+                        {
+                            case 1:
+                                break;
+                        }
+                        
 
                         break;
                        
@@ -68,7 +73,7 @@ namespace UniversityHospital.cs
                                 int menuResponse3 = Convert.ToInt32(Console.ReadLine());
                                 switch (menuResponse3)
                                 {
-                                    case 1:
+                                    case 1://Select Patient
                                     payroll.PatientList();              
                                     Console.WriteLine("Which patient should be assisted?");
                                         //Create index to select from Doctor and Nurse List
@@ -76,41 +81,39 @@ namespace UniversityHospital.cs
                                         int menuResponse4 = Convert.ToInt32(Console.ReadLine());
                                         switch (menuResponse4)
                                         {
-                                            case 1:
+                                            case 1:// Draw blood
+                                                
+                                                break;
+                                            case 2://Care for
                                                 break;
                                         }
                                         break;
               
                                 }
-                                //payroll.AddNurseToList();
-
                                 break;
-                            case 2://Avaliability of Recep or Jan
+                            case 2://Recep and Janitor Stats
                         payroll.JanitorAndReceptionList();
                                 Console.WriteLine("");
                                 break;
 
                         }
-                        //payroll.AddDoctorToList();
                         break;
-                        //payroll.AddNurseToList();
-                        //payroll.DoctorList();
-                
-                    case 4:
+                    case 4://payroll
                         payroll.EmployeeList();
-                        Console.WriteLine("To pay an employee type 1");
+                        Console.WriteLine("Type number of employee you would like to pay \n Example: Type 2 to pay Roth, Elise");
 
-                        int menuResponse5 = Convert.ToInt32(Console.ReadLine());
-                        switch (menuResponse5)
+                        int menuResponse6 = Convert.ToInt32(Console.ReadLine());
+                        switch (menuResponse6)
                         {
-                            case 1:
+                            case 1://Select who to pay
+                            
                                 break;
                         }
                         break;
                     case 5:
                         break;
                     default:
-                        Console.WriteLine("Please enter a value between \"1\" and \"6\"");
+                        Console.WriteLine("Invalid entry.\nPlease enter a value between \"1\" and \"5\"\n");
                         break;
                 }
             } while (start);

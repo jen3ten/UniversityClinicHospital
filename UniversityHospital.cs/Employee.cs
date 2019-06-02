@@ -16,5 +16,12 @@ namespace UniversityHospital.cs
         public abstract void PaySalary();
         public abstract void BloodDraw();
         public abstract void CarePatient();
+
+        //public int ChooseEmployeeType()
+        //{
+        //    //Make switch case with default...later
+        //    Console.WriteLine("Choose an employee position");
+        //    return Convert.ToInt32(Console.ReadLine();
+        //}
     }
 }

@@ -188,23 +188,23 @@ namespace UniversityHospital.cs
             Console.WriteLine(" ");
         }
 
+        //***********8
+        //public void FireDoctor(Doctor doctor)
+        //{
+        //    doctorList.Remove(doctor);
+        //}
 
-        public void FireDoctor(Doctor doctor)
-        {
-            doctorList.Remove(doctor);
-        }
-
-        public void FireNurse(Nurse nurse)
-        {
-            nurseList.Remove(nurse);
-        }
-        public void FireReceptionist(Receptionist receptionist)
-        {
-            receptionistList.Remove(receptionist);
-        }
-        public void FireJanitor(Janitor janitor)
-        {
-            janitorList.Remove(janitor);
-        }
+        //public void FireNurse(Nurse nurse)
+        //{
+        //    nurseList.Remove(nurse);
+        //}
+        //public void FireReceptionist(Receptionist receptionist)
+        //{
+        //    receptionistList.Remove(receptionist);
+        //}
+        //public void FireJanitor(Janitor janitor)
+        //{
+        //    janitorList.Remove(janitor);
+        //}
     }
 }
