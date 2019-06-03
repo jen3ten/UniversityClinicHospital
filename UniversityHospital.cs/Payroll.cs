@@ -178,6 +178,30 @@ namespace UniversityHospital.cs
             Console.WriteLine(" ");
         }
 
+        List<Employee> employeeList = new List<Employee>();
+        public void AddEmployeeToList()
+        {
+            AddDoctorToList();
+            AddJanitorToList();
+            AddNurseToList();
+            AddReceptionistToList();
+
+        }
+
+        public void EmployeeMasterList()
+        {
+            Console.WriteLine("\n----Employee-- Non Patient Interaction-- List:");
+            Console.WriteLine("Employee Name\t\t| Number |  Sweeping  |  On Phone   |");
+            Console.WriteLine("------------------------|--------|------------|-------------|");
+
+            int i = 1;
+            foreach (Doctor element in employeeList)
+            {
+                Console.WriteLine($"{i++}. {element.Name} \t|  {element.EmployeeNumber}  |     {element.Payment}    |    {element.Salary}  |");
+            }
+            Console.WriteLine(" ");
+        }
+
         /*public void NurseBloodDraw()
         {
             foreach (Patient element in patientList)
