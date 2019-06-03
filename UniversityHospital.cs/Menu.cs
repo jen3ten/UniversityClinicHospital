@@ -25,11 +25,12 @@ namespace UniversityHospital.cs
             do
             {
                 Console.WriteLine("What would you like to do?\n\n");
-                Console.WriteLine(" 1.  Add New Employee");
-                Console.WriteLine(" 2.  Fire an Employee");
-                Console.WriteLine(" 3.  Supervise Employee");
-                Console.WriteLine(" 4.  Payroll");
-                Console.WriteLine(" 5.  Done");
+                Console.WriteLine(" 1.  View Patient List");
+                Console.WriteLine(" 2.  //Fire an Employee//");
+                Console.WriteLine(" 3.  View Employee Lists");
+                Console.WriteLine(" 4.  Medical Task");
+                Console.WriteLine(" 5.  Payroll");
+                Console.WriteLine(" 6.  Done");
                 int menuResponse = Convert.ToInt32(Console.ReadLine());
                 //int menuResponse3 = Convert.ToInt32(Console.ReadLine());
                 // STILL WORKING ON THIS, NEEDED TO REARRANGE SOME THINGS TO HAVE LIST MAKE SENSE. 
@@ -95,9 +96,49 @@ namespace UniversityHospital.cs
                                     break;
                         }
                         break;
-                    case 4://payroll
-                        payroll.EmployeeList();
-                        Console.WriteLine("Type number of employee you would like to pay \n Example: Type 2 to pay Roth, Elise");
+                    case 4:
+                        Console.WriteLine("Please select:\n \"1\" for Doctor to Draw Patient Blood\n" +
+                                           "\"2\" for Doctor Patient Care\n" +
+                                           "\"3\" for Nurse to Draw Patient Blood\n" +
+                                           "\"4\" for Nurse Patient Care\n");
+                        int medicalResponse = Convert.ToInt32(Console.ReadLine());
+                        switch (medicalResponse)
+                        {
+                            case 1:
+                                payroll.DoctorBloodDraw();
+                                Console.WriteLine("Doctor has drawn blood samples and sent them to the lab for testing.");
+                                break;
+                            case 2:
+                                payroll.DoctorCare();
+                                Console.WriteLine("Doctor has cared for the patients");
+                                break;
+                            case 3:
+                                payroll.NurseBloodDraw();
+                                Console.WriteLine("Nurse has drawn blood sample and sent it to the lab for testing.");
+                                break;
+                            case 4:
+                                payroll.NurseCare();
+                                Console.WriteLine("Doctor has cared for the patients");
+                                break;
+                        }
+                        break;
+                    case 5://payroll
+                        Console.WriteLine("Please select:\n \"1\"Pay All Employees\n" +
+                                                            "\"2\" Select Employee for Payment");
+                        int payResponse = Convert.ToInt32(Console.ReadLine());
+                        switch (payResponse)
+                        {
+                            case 1:
+                                payroll.PayAll();
+                                Console.WriteLine("All Employees have been paid");
+                                break;
+                            case 2:
+                                Console.WriteLine("Please Select an Employee for payment:");
+                                break;
+                            default:
+                                Console.WriteLine("Please selece \"1\" for pay all or \"2\" to pay a single employee");
+                                break;
+                        }
 
                         int menuResponse6 = Convert.ToInt32(Console.ReadLine());
                         switch (menuResponse6)
@@ -107,7 +148,7 @@ namespace UniversityHospital.cs
                                 break;
                         }
                         break;
-                    case 5:
+                    case 6:
                         start = false;
                         break;
                     default:

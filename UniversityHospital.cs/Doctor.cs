@@ -23,12 +23,12 @@ namespace UniversityHospital.cs
         {
             if (Payment == false)
             {
-                Console.WriteLine($"You have paid {Name} {Salary}");
+                Console.WriteLine($"\tYou have paid {Name} {Salary}");
                 Payment = true;            
             }
             else
             {
-                Console.WriteLine($"{Name} has already been paid.");
+                Console.WriteLine($"\t{Name} has already been paid.");
             }
         }
 

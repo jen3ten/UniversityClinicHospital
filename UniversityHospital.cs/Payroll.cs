@@ -13,12 +13,16 @@ namespace UniversityHospital.cs
         public List<Receptionist> receptionistList = new List<Receptionist>();
         public List<Patient> patientList = new List<Patient>();
 
+        Doctor doctor = new Doctor("", 0, "");
+        Nurse nurse = new Nurse("", 0, "", "");
+        Receptionist receptionist = new Receptionist("", 0, "", "");
+        Janitor janitor = new Janitor("", 0, "");
 
         Doctor dr1 = new Doctor("Francona, Terry", 8561, "Gastroenterology");
         Doctor dr2 = new Doctor("Roth, Elise\t", 8213, "Neuro Surgeon");
         Doctor dr3 = new Doctor("Dolson, Miranda", 8497, "Obstetrics\t");
         Doctor dr4 = new Doctor("Sandhu, Cory\t", 8109, "Pediatrics\t");
-        Doctor dr5 = new Doctor("Messaros, Kyle", 8670, "Oncology\t"); 
+        Doctor dr5 = new Doctor("Messaros, Kyle", 8670, "Oncology\t");
         /// Number of patient were in the requirements for Nurses only
         Nurse n1 = new Nurse("Marshall, Ruby", 7512, "--", "21");
         Nurse n2 = new Nurse("Basiba, John\t", 7734, "--", "11");
@@ -107,15 +111,15 @@ namespace UniversityHospital.cs
             {
                 Console.WriteLine($"{i++}. {element.Name}\t| {element.Position}\t|  {element.EmployeeNumber}   | {element.Salary}\t|   {element.Payment}   |");
             }
-            foreach(Nurse element in nurseList)
+            foreach (Nurse element in nurseList)
             {
                 Console.WriteLine($"{i++}. {element.Name}\t| {element.Position}\t\t|  {element.EmployeeNumber}   | {element.Salary}\t|   {element.Payment}   |");
             }
-            foreach(Janitor element in janitorList)
+            foreach (Janitor element in janitorList)
             {
                 Console.WriteLine($"{i++}. {element.Name}\t| {element.Position}\t|  {element.EmployeeNumber}   | {element.Salary}\t|   {element.Payment}   |");
             }
-            foreach(Receptionist element in receptionistList)
+            foreach (Receptionist element in receptionistList)
             {
                 Console.WriteLine($"{i++}. {element.Name}\t| {element.Position}\t|  {element.EmployeeNumber}   | {element.Salary}\t|   {element.Payment}   |");
             }
@@ -134,7 +138,7 @@ namespace UniversityHospital.cs
             {
                 Console.WriteLine($"{i++}. {element.Name}\t|  {element.EmployeeNumber}  | {element.SpecialtyArea}\t| \t{element.NumberOfPatients} \t|");
             }
-            foreach(Nurse element in nurseList)
+            foreach (Nurse element in nurseList)
             {
                 Console.WriteLine($"{i++}. {element.Name}\t|  {element.EmployeeNumber}  |\t--\t{element.SpecialtyArea}\t| \t{element.NumberOfPatients} \t|");
 
@@ -154,7 +158,7 @@ namespace UniversityHospital.cs
             {
                 Console.WriteLine($"{i++}. {element.Name} \t|  {element.EmployeeNumber}  |     {element.Sweep}    |    --       |");
             }
-            foreach(Receptionist element in receptionistList)
+            foreach (Receptionist element in receptionistList)
             {
                 Console.WriteLine($"{i++}. {element.Name}\t|  {element.EmployeeNumber}  | \t--    |    {element.OnPhone}      |");
             }
@@ -177,6 +181,74 @@ namespace UniversityHospital.cs
 
             Console.WriteLine(" ");
         }
+
+        public void PayAll()
+        {
+            int i = 1;
+            foreach (Doctor element in doctorList)
+            {
+                element.PaySalary();
+                Console.WriteLine($"{i++}. {element.Name}\t| {element.Position}\t|  {element.EmployeeNumber}   | {element.Salary}\t|   {element.Payment}   |");
+            }
+            foreach (Nurse element in nurseList)
+            {
+                element.PaySalary();
+                Console.WriteLine($"{i++}. {element.Name}\t| {element.Position}\t\t|  {element.EmployeeNumber}   | {element.Salary}\t|   {element.Payment}   |");
+            }
+            foreach (Janitor element in janitorList)
+            {
+                element.PaySalary();
+                Console.WriteLine($"{i++}. {element.Name}\t| {element.Position}\t|  {element.EmployeeNumber}   | {element.Salary}\t|   {element.Payment}   |");
+            }
+            foreach (Receptionist element in receptionistList)
+            {
+                element.PaySalary();
+                Console.WriteLine($"{i++}. {element.Name}\t| {element.Position}\t|  {element.EmployeeNumber}   | {element.Salary}\t|   {element.Payment}   |");
+            }
+            Console.WriteLine(" ");
+        }
+
+
+
+        public void NurseCare()
+        {
+
+            foreach (Patient element in patientList)
+            {
+                element.BloodLevel++;
+                element.HealthLevel++;
+            }
+        }
+
+        public void NurseBloodDraw()
+        {
+            foreach (Patient element in patientList)
+            {
+                element.BloodLevel--;
+                element.HealthLevel++;
+            }
+        }
+
+        public void DoctorBloodDraw()
+        {
+            foreach (Patient element in patientList)
+            {
+                element.BloodLevel -= 2;
+                element.HealthLevel += 3;
+            }
+        }
+
+        public void DoctorCare()
+        {
+            foreach (Patient element in patientList)
+            {
+                element.BloodLevel += 2;
+                element.HealthLevel += 2;
+
+            }
+        }
+
+
 
         /*public void NurseBloodDraw()
         {
@@ -248,3 +320,4 @@ namespace UniversityHospital.cs
 
     }
 }
+
