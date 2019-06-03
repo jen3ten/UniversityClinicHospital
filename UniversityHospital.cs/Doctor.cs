@@ -9,14 +9,13 @@ namespace UniversityHospital.cs
     {
         public string SpecialtyArea { get; set; }
 
-        public Doctor(string name, int number, string specialty, string patientNumber) : base()
+        public Doctor(string name, int number, string specialty) : base()
         {
             Position = "Doctor";
             Salary = "$90,000";
             SpecialtyArea = specialty;
             Name = name;
             EmployeeNumber = number;
-            NumberOfPatients = patientNumber;
             Payment = false;
         }
 

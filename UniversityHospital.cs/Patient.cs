@@ -6,28 +6,27 @@ namespace UniversityHospital.cs
 {
     public class Patient
     {
-        Doctor doctor = new Doctor ("",0,"","");
-        Nurse nurse = new Nurse("", 0, "", "");
+        List<Patient> patientList = new List<Patient>();
+
         public string Name { get; set; }
         public int PatientNumber { get; set; }
         public int HealthLevel { get; set; }
         public int BloodLevel { get; set; }
 
-        public Patient(string name, int number)
+        public Patient(string name)
         {
             Name = name;
-            PatientNumber = number;
+            //PatientNumber = number;
             HealthLevel = 20;
             BloodLevel = 10;
         }
 
-        List<Patient> patientList = new List<Patient>();
 
-        Patient p1 = new Patient("Stone, Travis", 10874);
-        Patient p2 = new Patient("Jones, Angel", 15823);
-        Patient p3 = new Patient("Hamilton, Thomas", 12561);
-        Patient p4 = new Patient("Kipnis, Jason", 16810);
-        Patient p5 = new Patient("Kluber, Bridget", 108945);
+        Patient p1 = new Patient("Stone, Travis");
+        Patient p2 = new Patient("Jones, Angel");
+        Patient p3 = new Patient("Hamilton, Thomas");
+        Patient p4 = new Patient("Kipnis, Jason");
+        Patient p5 = new Patient("Kluber, Bridget");
 
         public void AddPatientToList()
         {
@@ -43,7 +42,6 @@ namespace UniversityHospital.cs
             Console.WriteLine("\n---- Patient List: ----");
             Console.WriteLine("Patient Name\t\t| Patient Number |  Health Level |  Blood Level   |");
             Console.WriteLine("-------------------|--------|------------|-------------|");
-            AddPatientToList();
 
             int i = 1;
             foreach (Patient element in patientList)
@@ -56,7 +54,7 @@ namespace UniversityHospital.cs
 
         public void NurseCare()
         {
-            PatientList();
+
             foreach (Patient element in patientList)
             {
                 BloodLevel++;
@@ -86,10 +84,9 @@ namespace UniversityHospital.cs
         public void DoctorCare()
         {
             foreach (Patient element in patientList)
-            {
-                BloodLevel += 2;
-                HealthLevel += 2;
-            }
+            BloodLevel += 2;
+            HealthLevel += 2;
         }
+
     }
 }

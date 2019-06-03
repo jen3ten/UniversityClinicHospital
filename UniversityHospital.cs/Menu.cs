@@ -6,20 +6,13 @@ namespace UniversityHospital.cs
 {
     public class Menu
     {
-        bool start = true;
-        Doctor doctor;
-
-
 
         public void MainMenu()
         {
-            Console.WriteLine("Welcome to Univserity Hospitals Database!");
-
+            bool start = true;
+            Patient patient = new Patient("");
             Payroll payroll = new Payroll();
-            payroll.AddDoctorToList();
-            payroll.AddNurseToList();
-            payroll.AddJanitorToList();
-            payroll.AddReceptionistToList();
+            Console.WriteLine("Welcome to Univserity Hospitals Database!");
 
 
             do
@@ -32,22 +25,22 @@ namespace UniversityHospital.cs
                 Console.WriteLine(" 5.  Done");
                 int menuResponse = Convert.ToInt32(Console.ReadLine());
                 //int menuResponse3 = Convert.ToInt32(Console.ReadLine());
-                
                 // STILL WORKING ON THIS, NEEDED TO REARRANGE SOME THINGS TO HAVE LIST MAKE SENSE. 
-
-
-
-                if (menuResponse.Equals(6))
-                {   
-                    start = false;
-                }
 
                 switch (menuResponse)
                 {
                     case 1:
+                        payroll.AddPatientToList();
                         payroll.PatientList();
+                        patient.NurseCare();
+                        patient.NurseBloodDraw();
                         break;
                     case 2:
+                        payroll.AddDoctorToList();
+                        payroll.AddJanitorToList();
+                        payroll.AddNurseToList();
+                        payroll.AddReceptionistToList();
+
                         payroll.EmployeeList();
                         Console.WriteLine("Which employee will be let go?");
                         int menuResponse5 = Convert.ToInt32(Console.ReadLine());
@@ -111,6 +104,7 @@ namespace UniversityHospital.cs
                         }
                         break;
                     case 5:
+                        start = false;
                         break;
                     default:
                         Console.WriteLine("Invalid entry.\nPlease enter a value between \"1\" and \"5\"\n");
