@@ -20,45 +20,32 @@ namespace UniversityHospital.cs
         }
 
 
-
-
-
-        /*public void NurseCare()
+        public void NurseCare()
         {
-
-            foreach (Patient element in patientList)
-            {
                 BloodLevel++;
                 HealthLevel++;
-            }
+            
         }
 
         public void NurseBloodDraw()
         {
-            foreach (Patient element in patientList)
-            {
                 BloodLevel--;
                 HealthLevel++;
-            }
+           
         }
 
         public void DoctorBloodDraw()
         {
-            foreach (Patient element in patientList)
-            {
                 BloodLevel -= 2;
                 HealthLevel += 3;
                 Console.WriteLine("Blood sample has been drawn and sent to the lab for testing.");
-            }
         }
 
         public void DoctorCare()
         {
-            foreach (Patient element in patientList)
             BloodLevel += 2;
             HealthLevel += 2;
         }
-        */
 
     }
 }

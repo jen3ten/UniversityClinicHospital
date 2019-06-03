@@ -13,6 +13,7 @@ namespace UniversityHospital.cs
         public List<Receptionist> receptionistList = new List<Receptionist>();
         public List<Patient> patientList = new List<Patient>();
 
+        Patient patient = new Patient("");
 
         Doctor dr1 = new Doctor("Francona, Terry", 8561, "Gastroenterology");
         Doctor dr2 = new Doctor("Roth, Elise\t", 8213, "Neuro Surgeon");
@@ -178,12 +179,11 @@ namespace UniversityHospital.cs
             Console.WriteLine(" ");
         }
 
-        /*public void NurseBloodDraw()
+        public void NurseBloodDraw()
         {
             foreach (Patient element in patientList)
             {
-                patient.BloodLevel--;
-                patient.HealthLevel++;
+                patient.NurseBloodDraw();
             }
         }
 
@@ -191,7 +191,7 @@ namespace UniversityHospital.cs
         {
             patient.BloodLevel++;
             patient.HealthLevel++;
-        }*/
+        }
 
 
         /*public virtual void RemoveEmployee(Payroll employeeList)

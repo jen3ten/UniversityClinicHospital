@@ -26,6 +26,17 @@ namespace UniversityHospital.Test
 
         }
 
+        [Fact]
+        public void Nurse_Blood_Draw()
+        {
+            Payroll sut = new Payroll();
+            Patient patient = new Patient("");
+
+            patient.NurseBloodDraw();
+
+            Assert.Equal(11, patient.HealthLevel);
+        }
+
 
 
     }

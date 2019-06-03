@@ -11,7 +11,7 @@ namespace UniversityHospital.cs
         {
             bool start = true;
 
-            Patient patient = new Patient("");
+            Patient patient;
             Payroll payroll = new Payroll();
             Console.WriteLine("Welcome to Univserity Hospitals Database!");
 
@@ -33,10 +33,11 @@ namespace UniversityHospital.cs
                 int menuResponse = Convert.ToInt32(Console.ReadLine());
                 //int menuResponse3 = Convert.ToInt32(Console.ReadLine());
                 // STILL WORKING ON THIS, NEEDED TO REARRANGE SOME THINGS TO HAVE LIST MAKE SENSE. 
-
+                patient = new Patient("");
                 switch (menuResponse)
                 {
                     case 1:
+                        payroll.NurseBloodDraw();
                         payroll.PatientList();
                         break;
                     case 2:
