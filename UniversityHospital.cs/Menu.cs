@@ -6,12 +6,23 @@ namespace UniversityHospital.cs
 {
     public class Menu
     {
-        bool start = true;
-        Doctor doctor;
 
+        bool start = true;
+        
         public void MainMenu()
         {
             bool start = true;
+
+            Patient patient = new Patient("");
+            Payroll payroll = new Payroll();
+            Console.WriteLine("Welcome to Univserity Hospitals Database!");
+
+            payroll.AddPatientToList();
+            payroll.AddReceptionistToList();
+            payroll.AddNurseToList();
+            payroll.AddJanitorToList();
+            payroll.AddDoctorToList();
+
             Patient patient = new Patient("", 0);
             Payroll payroll = new Payroll();
             Console.WriteLine("Welcome to Univserity Hospitals Database!");
@@ -32,15 +43,9 @@ namespace UniversityHospital.cs
                 switch (menuResponse)
                 {
                     case 1:
-                        payroll.AddPatientToList();
                         payroll.PatientList();
                         break;
                     case 2:
-                        payroll.AddDoctorToList();
-                        payroll.AddJanitorToList();
-                        payroll.AddNurseToList();
-                        payroll.AddReceptionistToList();
-
                         payroll.EmployeeList();
                         Console.WriteLine("Which employee will be let go?");
                         int menuResponse5 = Convert.ToInt32(Console.ReadLine());
@@ -68,7 +73,7 @@ namespace UniversityHospital.cs
                                 switch (menuResponse3)
                                 {
                                     case 1://Select Patient
-                                        payroll.PatientList();
+                                        payroll.PatientList();              
                                         Console.WriteLine("Which patient should be assisted?");
                                         //Create index to select from Doctor and Nurse List
 

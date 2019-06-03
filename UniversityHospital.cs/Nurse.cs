@@ -6,7 +6,6 @@ namespace UniversityHospital.cs
 {
     public class Nurse : Employee
     {
-        Patient patient;
         public string SpecialtyArea { get; set; }
 
         public Nurse(string name, int number, string specialty, string patientNumber) : base()

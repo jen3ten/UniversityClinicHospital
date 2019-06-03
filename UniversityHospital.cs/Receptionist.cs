@@ -6,7 +6,6 @@ namespace UniversityHospital.cs
 {
     public class Receptionist : Employee
     {
-
         public string OnPhone { get; set; }
 
         public Receptionist(string name, int number, string phone, string patientNumber) : base()
@@ -32,6 +31,5 @@ namespace UniversityHospital.cs
                 Console.WriteLine($"{Name} has already been paid.");
             }
         }
-
     }
 }
