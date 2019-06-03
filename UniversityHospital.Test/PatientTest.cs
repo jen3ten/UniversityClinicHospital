@@ -15,5 +15,16 @@ namespace UniversityHospital.Test
             Assert.Equal(90000, sut.PatientNumber);
         }
 
+       [Fact]
+        public void Patient_Health_Changes_By_3()
+        {
+            Patient sut = new Patient("", number);
+
+            sut.NurseBloodDraw();
+
+            Assert.Equal(8, sut.HealthLevel);
+            
+        }
+
     }
 }

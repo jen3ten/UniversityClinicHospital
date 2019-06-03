@@ -14,8 +14,6 @@ namespace UniversityHospital.cs
         public bool Payment { get; set; }
 
         public abstract void PaySalary();
-        public abstract void BloodDraw();
-        public abstract void CarePatient();
 
         //public int ChooseEmployeeType()
         //{

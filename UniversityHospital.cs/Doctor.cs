@@ -7,8 +7,6 @@ namespace UniversityHospital.cs
     public class Doctor : Employee
 
     {
-        Patient patient;
-
         public string SpecialtyArea { get; set; }
 
         public Doctor(string name, int number, string specialty, string patientNumber) : base()
@@ -35,18 +33,6 @@ namespace UniversityHospital.cs
             }
         }
 
-        public override void BloodDraw()
-        {
-            patient.BloodLevel-=2;
-            patient.HealthLevel+=3;
-            Console.WriteLine("Blood sample has been drawn and sent to the lab for testing.");
-        }
-
-        public override void CarePatient()
-        {
-            patient.BloodLevel+=2;
-            patient.HealthLevel+=2;
-        }
 
         //**********
         //public Doctor ChooseEmployee(Payroll payroll)
