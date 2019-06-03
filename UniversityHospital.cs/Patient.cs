@@ -18,10 +18,5 @@ namespace UniversityHospital.cs
             HealthLevel = 20;
             BloodLevel = 10;
         }
-
-
-
-
-
     }
 }

@@ -32,8 +32,6 @@ namespace UniversityHospital.cs
                 Console.WriteLine(" 5.  Payroll");
                 Console.WriteLine(" 6.  Done");
                 int menuResponse = Convert.ToInt32(Console.ReadLine());
-                //int menuResponse3 = Convert.ToInt32(Console.ReadLine());
-                // STILL WORKING ON THIS, NEEDED TO REARRANGE SOME THINGS TO HAVE LIST MAKE SENSE. 
 
                 switch (menuResponse)
                 {
@@ -52,48 +50,24 @@ namespace UniversityHospital.cs
 
                         break;
 
-                    case 3://Inform Doctor or Nurse of Patient Need
-                        Console.WriteLine("1. Inform Doctor or Nurse of Patient Need\n" +
-                                          "2. Review Receptionists and Janitors' Status'");
+                    case 3:
+                            Console.WriteLine("Please select\n\"1\" for Medical Employee List or \n" +
+                                                        "\"2\" for Non Medical Employee List");
 
                         int menuResponse2 = Convert.ToInt32(Console.ReadLine());
                         switch (menuResponse2)
                         {
-                            case 1://select a Doctor or Nurse to take care of patient
+                            case 1:
                                 payroll.DoctorAndNurseList();
-                                Console.WriteLine("These are the Doctors and Nurses currently avaliable.\n" +
-                                                    "Select a Doctor or Nurse to draw blood sample");
-
-                                int menuResponse3 = Convert.ToInt32(Console.ReadLine());
-                                switch (menuResponse3)
-                                {
-                                    case 1://Select Patient
-                                        payroll.PatientList();              
-                                        Console.WriteLine("Which patient should be assisted?");
-                                        //Create index to select from Doctor and Nurse List
-
-                                        int menuResponse4 = Convert.ToInt32(Console.ReadLine());
-                                            switch (menuResponse4)
-                                            {
-                                                case 1:// Draw blood
-
-                                                    break;
-                                                case 2://Care for
-                                                    break;
-                                                default:
-                                                    Console.WriteLine("Please enter either \"1\" or \"2\".");
-                                                    break;
-                                            }break;
-                                }
+                                Console.WriteLine("These are the Doctors and Nurses currently avaliable.");
                                 break;
-
-                            case 2://Recep and Janitor Stats
+                            case 2:
                                 payroll.JanitorAndReceptionList();
-                                Console.WriteLine("");
+                                Console.WriteLine("There are currently Receptionists and Janitors available.");
                                 break;
                             default:
                                 Console.WriteLine("Please enter either \"1\" or \"2\".");
-                                    break;
+                                break;
                         }
                         break;
                     case 4:
@@ -122,7 +96,7 @@ namespace UniversityHospital.cs
                                 break;
                         }
                         break;
-                    case 5://payroll
+                    case 5:
                         Console.WriteLine("Please select:\n \"1\"Pay All Employees\n" +
                                                             "\"2\" Select Employee for Payment");
                         int payResponse = Convert.ToInt32(Console.ReadLine());
@@ -139,20 +113,13 @@ namespace UniversityHospital.cs
                                 Console.WriteLine("Please selece \"1\" for pay all or \"2\" to pay a single employee");
                                 break;
                         }
-
-                        int menuResponse6 = Convert.ToInt32(Console.ReadLine());
-                        switch (menuResponse6)
-                        {
-                            case 1://Select who to pay
-
-                                break;
-                        }
                         break;
+
                     case 6:
                         start = false;
                         break;
                     default:
-                        Console.WriteLine("Invalid entry.\nPlease enter a value between \"1\" and \"5\"\n");
+                        Console.WriteLine("Invalid entry.\nPlease enter a value between \"1\" and \"6\"\n");
                         break;
                 }
             } while (start);
