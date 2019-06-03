@@ -9,19 +9,12 @@ namespace UniversityHospital.cs
         bool start = true;
         Doctor doctor;
 
-
-
-
-
         public void MainMenu()
         {
-            Console.WriteLine("Welcome to Univserity Hospitals Database!");
-
+            bool start = true;
+            Patient patient = new Patient("", 0);
             Payroll payroll = new Payroll();
-            payroll.AddDoctorToList();
-            payroll.AddNurseToList();
-            payroll.AddJanitorToList();
-            payroll.AddReceptionistToList();
+            Console.WriteLine("Welcome to Univserity Hospitals Database!");
 
 
             do
@@ -34,22 +27,20 @@ namespace UniversityHospital.cs
                 Console.WriteLine(" 5.  Done");
                 int menuResponse = Convert.ToInt32(Console.ReadLine());
                 //int menuResponse3 = Convert.ToInt32(Console.ReadLine());
-                
                 // STILL WORKING ON THIS, NEEDED TO REARRANGE SOME THINGS TO HAVE LIST MAKE SENSE. 
-
-
-
-                if (menuResponse.Equals(6))
-                {   
-                    start = false;
-                }
 
                 switch (menuResponse)
                 {
                     case 1:
+                        payroll.AddPatientToList();
                         payroll.PatientList();
                         break;
                     case 2:
+                        payroll.AddDoctorToList();
+                        payroll.AddJanitorToList();
+                        payroll.AddNurseToList();
+                        payroll.AddReceptionistToList();
+
                         payroll.EmployeeList();
                         Console.WriteLine("Which employee will be let go?");
                         int menuResponse5 = Convert.ToInt32(Console.ReadLine());
@@ -60,11 +51,11 @@ namespace UniversityHospital.cs
                         }
 
                         break;
-                       
+
                     case 3://Inform Doctor or Nurse of Patient Need
                         Console.WriteLine("1. Inform Doctor or Nurse of Patient Need\n" +
-                                          "2. Review Receptionists and Janitors' Status'" );
-                                
+                                          "2. Review Receptionists and Janitors' Status'");
+
                         int menuResponse2 = Convert.ToInt32(Console.ReadLine());
                         switch (menuResponse2)
                         {
@@ -74,13 +65,11 @@ namespace UniversityHospital.cs
                                                     "Select a Doctor or Nurse to draw blood sample");
 
                                 int menuResponse3 = Convert.ToInt32(Console.ReadLine());
-                                //Doctor chosenDoctor = payroll.doctorList.
                                 switch (menuResponse3)
                                 {
                                     case 1://Select Patient
-                                        payroll.PatientList();              
-
-                                        Console.WriteLine("Which patient need to be assisted?");
+                                        payroll.PatientList();
+                                        Console.WriteLine("Which patient should be assisted?");
                                         //Create index to select from Doctor and Nurse List
 
                                         int menuResponse4 = Convert.ToInt32(Console.ReadLine());
@@ -89,8 +78,7 @@ namespace UniversityHospital.cs
                                             case 1:// Draw blood
 
                                                 break;
-                                            case 2:// Care for
-
+                                            case 2://Care for
                                                 break;
                                         }
                                         break;
@@ -112,11 +100,11 @@ namespace UniversityHospital.cs
                         {
                             case 1://Select who to pay
 
-                            
                                 break;
                         }
                         break;
                     case 5:
+                        start = false;
                         break;
                     default:
                         Console.WriteLine("Invalid entry.\nPlease enter a value between \"1\" and \"5\"\n");
@@ -126,5 +114,5 @@ namespace UniversityHospital.cs
         }
 
     }
-        
+
 }
