@@ -8,13 +8,19 @@ namespace UniversityHospital.cs
     {
         bool start = true;
         Doctor doctor;
-        Patient patient;
+
 
 
         public void MainMenu()
         {
             Console.WriteLine("Welcome to Univserity Hospitals Database!");
-            Payroll payroll;
+
+            Payroll payroll = new Payroll();
+            payroll.AddDoctorToList();
+            payroll.AddNurseToList();
+            payroll.AddJanitorToList();
+            payroll.AddReceptionistToList();
+
 
             do
             {
@@ -23,13 +29,12 @@ namespace UniversityHospital.cs
                 Console.WriteLine(" 2.  Fire an Employee");
                 Console.WriteLine(" 3.  Supervise Employee");
                 Console.WriteLine(" 4.  Payroll");
-                Console.WriteLine(" 5.  View Patient Status");
-                Console.WriteLine(" 6.  Done");
+                Console.WriteLine(" 5.  Done");
                 int menuResponse = Convert.ToInt32(Console.ReadLine());
-                payroll = new Payroll();
                 //int menuResponse3 = Convert.ToInt32(Console.ReadLine());
-
+                
                 // STILL WORKING ON THIS, NEEDED TO REARRANGE SOME THINGS TO HAVE LIST MAKE SENSE. 
+
 
 
                 if (menuResponse.Equals(6))
@@ -40,9 +45,10 @@ namespace UniversityHospital.cs
                 switch (menuResponse)
                 {
                     case 1:
+                        payroll.PatientList();
                         break;
                     case 2:
-                          payroll.EmployeeList();
+                        payroll.EmployeeList();
                         Console.WriteLine("Which employee will be let go?");
                         int menuResponse5 = Convert.ToInt32(Console.ReadLine());
                         switch (menuResponse5)
@@ -50,17 +56,18 @@ namespace UniversityHospital.cs
                             case 1:
                                 break;
                         }
+
                         break;
                        
                     case 3://Inform Doctor or Nurse of Patient Need
-                                Console.WriteLine("1. Inform Doctor or Nurse of Patient Need\n" +
-                                                     "2. Review Receptionists and Janitors' Status'" );
+                        Console.WriteLine("1. Inform Doctor or Nurse of Patient Need\n" +
+                                          "2. Review Receptionists and Janitors' Status'" );
                                 
                         int menuResponse2 = Convert.ToInt32(Console.ReadLine());
                         switch (menuResponse2)
                         {
                             case 1://select a Doctor or Nurse to take care of patient
-                             payroll.DoctorAndNurseList();
+                                payroll.DoctorAndNurseList();
                                 Console.WriteLine("These are the Doctors and Nurses currently avaliable.\n" +
                                                     "Select a Doctor or Nurse to draw blood sample");
 
@@ -68,14 +75,15 @@ namespace UniversityHospital.cs
                                 switch (menuResponse3)
                                 {
                                     case 1://Select Patient
-                                    payroll.PatientList();              
-                                    Console.WriteLine("Which patient should be assisted?");
+                                        payroll.PatientList();              
+                                        Console.WriteLine("Which patient should be assisted?");
                                         //Create index to select from Doctor and Nurse List
 
                                         int menuResponse4 = Convert.ToInt32(Console.ReadLine());
                                         switch (menuResponse4)
                                         {
                                             case 1:// Draw blood
+                                                
                                                 break;
                                             case 2://Care for
                                                 break;
@@ -83,6 +91,7 @@ namespace UniversityHospital.cs
                                         break;
                                 }
                                 break;
+
                             case 2://Recep and Janitor Stats
                                 payroll.JanitorAndReceptionList();
                                 Console.WriteLine("");
@@ -102,12 +111,7 @@ namespace UniversityHospital.cs
                         }
                         break;
                     case 5:
-                        patient.NurseCare();
                         break;
-                    case 6:
-                        start = false;
-                        break;
-
                     default:
                         Console.WriteLine("Invalid entry.\nPlease enter a value between \"1\" and \"5\"\n");
                         break;
