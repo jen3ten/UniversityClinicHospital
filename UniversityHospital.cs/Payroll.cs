@@ -179,11 +179,11 @@ namespace UniversityHospital.cs
             Console.WriteLine(" ");
         }
 
-        public void NurseBloodDraw()
+        public void NurseDraw()
         {
             foreach (Patient element in patientList)
             {
-                patient.NurseBloodDraw();
+                element.NurseBloodDraw();
             }
         }
 
