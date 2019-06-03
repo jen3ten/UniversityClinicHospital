@@ -72,15 +72,17 @@ namespace UniversityHospital.cs
                                         //Create index to select from Doctor and Nurse List
 
                                         int menuResponse4 = Convert.ToInt32(Console.ReadLine());
-                                        switch (menuResponse4)
-                                        {
-                                            case 1:// Draw blood
+                                            switch (menuResponse4)
+                                            {
+                                                case 1:// Draw blood
 
-                                                break;
-                                            case 2://Care for
-                                                break;
-                                        }
-                                        break;
+                                                    break;
+                                                case 2://Care for
+                                                    break;
+                                                default:
+                                                    Console.WriteLine("Please enter either \"1\" or \"2\".");
+                                                    break;
+                                            }break;
                                 }
                                 break;
 
@@ -88,6 +90,9 @@ namespace UniversityHospital.cs
                                 payroll.JanitorAndReceptionList();
                                 Console.WriteLine("");
                                 break;
+                            default:
+                                Console.WriteLine("Please enter either \"1\" or \"2\".");
+                                    break;
                         }
                         break;
                     case 4://payroll
