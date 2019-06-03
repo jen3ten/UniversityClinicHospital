@@ -14,6 +14,12 @@ namespace UniversityHospital.cs
             Payroll payroll = new Payroll();
             Console.WriteLine("Welcome to Univserity Hospitals Database!");
 
+            payroll.AddPatientToList();
+            payroll.AddReceptionistToList();
+            payroll.AddNurseToList();
+            payroll.AddJanitorToList();
+            payroll.AddDoctorToList();
+
 
             do
             {
@@ -30,17 +36,9 @@ namespace UniversityHospital.cs
                 switch (menuResponse)
                 {
                     case 1:
-                        payroll.AddPatientToList();
                         payroll.PatientList();
-                        patient.NurseCare();
-                        patient.NurseBloodDraw();
                         break;
                     case 2:
-                        payroll.AddDoctorToList();
-                        payroll.AddJanitorToList();
-                        payroll.AddNurseToList();
-                        payroll.AddReceptionistToList();
-
                         payroll.EmployeeList();
                         Console.WriteLine("Which employee will be let go?");
                         int menuResponse5 = Convert.ToInt32(Console.ReadLine());

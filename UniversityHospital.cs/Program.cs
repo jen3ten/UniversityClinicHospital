@@ -10,11 +10,6 @@ namespace UniversityHospital.cs
             menu.MainMenu();
 
             Payroll payroll = new Payroll();
-            payroll.AddDoctorToList();
-            payroll.AddNurseToList();
-            payroll.AddJanitorToList();
-            payroll.AddReceptionistToList();
-
 
         }
     }
