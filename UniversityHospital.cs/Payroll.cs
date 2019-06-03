@@ -163,16 +163,14 @@ namespace UniversityHospital.cs
 
         public void PatientList()
         {
-            AddPatientToList();
-
             Console.WriteLine("\n---- Patient List: ----");
             Console.WriteLine("Patient Name\t\t| Patient Number |  Health Level |  Blood Level   |");
-            Console.WriteLine("-------------------|--------|------------|-------------|");
+            Console.WriteLine("------------------------|----------------|---------------|----------------|");
 
             int i = 1;
             foreach (Patient element in patientList)
             {
-                Console.WriteLine($"{i++}. {element.Name} \t|  {element.PatientNumber}  |     {element.HealthLevel}    |    {element.BloodLevel}       |");
+                Console.WriteLine($"{i++}. {element.Name} \t|  {element.PatientNumber}\t |     {element.HealthLevel}\t |    {element.BloodLevel}  \t  |");
             }
 
             Console.WriteLine(" ");
