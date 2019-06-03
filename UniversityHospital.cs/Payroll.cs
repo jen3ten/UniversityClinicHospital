@@ -242,5 +242,21 @@ namespace UniversityHospital.cs
         //{
         //    janitorList.Remove(janitor);
         //}
+
+        //**********
+        //public Doctor ChooseEmployee(Payroll payroll)
+        //{
+        //    int i = 0;
+        //    foreach (var employee in payroll.doctorList)
+        //    {
+        //        i = i + 1;
+        //        Console.WriteLine($"{i}. {employee.Name}");
+        //    }
+        //    int choice = Convert.ToInt32(Console.ReadLine());
+        //    choice--;
+        //    Console.WriteLine($"You have chosen {payroll.doctorList[choice].Name}");
+        //    return payroll.doctorList[choice];
+        //}
+
     }
 }

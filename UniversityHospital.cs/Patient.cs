@@ -6,10 +6,6 @@ namespace UniversityHospital.cs
 {
     public class Patient
     {
-        //public List<Doctor> doctorList = new List<Doctor>();
-
-        //public List<Patient> patientList = new List<Patient>();
-
         public string Name { get; set; }
         public int PatientNumber { get; set; }
         public int HealthLevel { get; set; }
@@ -22,7 +18,5 @@ namespace UniversityHospital.cs
             HealthLevel = 20;
             BloodLevel = 10;
         }
-
-
     }
 }

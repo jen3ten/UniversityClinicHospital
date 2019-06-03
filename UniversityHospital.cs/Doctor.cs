@@ -20,7 +20,6 @@ namespace UniversityHospital.cs
             EmployeeNumber = number;
             NumberOfPatients = patientNumber;
             Payment = false;
-            //Payment; //making a random comment to push
         }
 
         public override void PaySalary()
@@ -50,20 +49,6 @@ namespace UniversityHospital.cs
             patient.HealthLevel += 2;
         }
 
-        //**********
-        //public Doctor ChooseEmployee(Payroll payroll)
-        //{
-        //    int i = 0;
-        //    foreach (var employee in payroll.doctorList)
-        //    {
-        //        i = i + 1;
-        //        Console.WriteLine($"{i}. {employee.Name}");
-        //    }
-        //    int choice = Convert.ToInt32(Console.ReadLine());
-        //    choice--;
-        //    Console.WriteLine($"You have chosen {payroll.doctorList[choice].Name}");
-        //    return payroll.doctorList[choice];
-        //}
     }
 
 }

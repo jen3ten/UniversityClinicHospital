@@ -19,8 +19,6 @@ namespace UniversityHospital.Test
         public void Patient_List_Values()
         {
             Patient sut = new Patient("", number);
-
-
         }
 
     }

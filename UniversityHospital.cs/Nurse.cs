@@ -32,9 +32,5 @@ namespace UniversityHospital.cs
                 Console.WriteLine($"{Name} has already been paid.");
             }
         }
-
-
-
-
     }
 }
