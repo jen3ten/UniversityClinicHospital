@@ -11,7 +11,7 @@ namespace UniversityHospital.cs
         public List<Nurse> nurseList = new List<Nurse>();
         public List<Janitor> janitorList = new List<Janitor>();
         public List<Receptionist> receptionistList = new List<Receptionist>();
-        public List<Patient> patientList = new List<Patient>();
+        //public List<Patient> patientList = new List<Patient>();
 
         Doctor doctor = new Doctor("", 0, "");
         Nurse nurse = new Nurse("", 0, "", "");
@@ -45,11 +45,11 @@ namespace UniversityHospital.cs
         Receptionist r1 = new Receptionist("Balou, Mary\t", 1058, "No ", "N/A");
         Receptionist r2 = new Receptionist("Lazara, Kim\t", 1058, "Yes", "N/A");
 
-        Patient p1 = new Patient("Stone, Travis", 10574);
-        Patient p2 = new Patient("Jones, Angel", 10986);
-        Patient p3 = new Patient("Hamilton, Thomas", 10025);
-        Patient p4 = new Patient("Kipnis, Jason", 10658);
-        Patient p5 = new Patient("Kluber, Bridget", 10234);
+        //Patient p1 = new Patient("Stone, Travis", 10574);
+        //Patient p2 = new Patient("Jones, Angel", 10986);
+        //Patient p3 = new Patient("Hamilton, Thomas", 10025);
+        //Patient p4 = new Patient("Kipnis, Jason", 10658);
+        //Patient p5 = new Patient("Kluber, Bridget", 10234);
 
         public void AddDoctorToList()
         {
@@ -90,14 +90,14 @@ namespace UniversityHospital.cs
             receptionistList.Add(r2);
         }
 
-        public void AddPatientToList()
-        {
-            patientList.Add(p1);
-            patientList.Add(p2);
-            patientList.Add(p3);
-            patientList.Add(p4);
-            patientList.Add(p5);
-        }
+        //public void AddPatientToList()
+        //{
+        //    patientList.Add(p1);
+        //    patientList.Add(p2);
+        //    patientList.Add(p3);
+        //    patientList.Add(p4);
+        //    patientList.Add(p5);
+        //}
 
 
         public void EmployeeList()
@@ -167,20 +167,20 @@ namespace UniversityHospital.cs
 
 
 
-        public void PatientList()
-        {
-            Console.WriteLine("\n---- Patient List: ----");
-            Console.WriteLine("Patient Name\t\t| Patient Number |  Health Level |  Blood Level   |");
-            Console.WriteLine("------------------------|----------------|---------------|----------------|");
+        //public void PatientList()
+        //{
+        //    Console.WriteLine("\n---- Patient List: ----");
+        //    Console.WriteLine("Patient Name\t\t| Patient Number |  Health Level |  Blood Level   |");
+        //    Console.WriteLine("------------------------|----------------|---------------|----------------|");
 
-            int i = 1;
-            foreach (Patient element in patientList)
-            {
-                Console.WriteLine($"{i++}. {element.Name} \t|  {element.PatientNumber}\t |     {element.HealthLevel}\t |    {element.BloodLevel}  \t  |");
-            }
+        //    int i = 1;
+        //    foreach (Patient element in patientList)
+        //    {
+        //        Console.WriteLine($"{i++}. {element.Name} \t|  {element.PatientNumber}\t |     {element.HealthLevel}\t |    {element.BloodLevel}  \t  |");
+        //    }
 
-            Console.WriteLine(" ");
-        }
+        //    Console.WriteLine(" ");
+        //}
 
         public void PayAll()
         {
@@ -210,43 +210,43 @@ namespace UniversityHospital.cs
 
 
 
-        public void NurseCare()
-        {
+        //public void NurseCare()
+        //{
 
-            foreach (Patient element in patientList)
-            {
-                element.BloodLevel++;
-                element.HealthLevel++;
-            }
-        }
+        //    foreach (Patient element in patientList)
+        //    {
+        //        element.BloodLevel++;
+        //        element.HealthLevel++;
+        //    }
+        //}
 
-        public void NurseBloodDraw()
-        {
-            foreach (Patient element in patientList)
-            {
-                element.BloodLevel--;
-                element.HealthLevel++;
-            }
-        }
+        //public void NurseBloodDraw()
+        //{
+        //    foreach (Patient element in patientList)
+        //    {
+        //        element.BloodLevel--;
+        //        element.HealthLevel++;
+        //    }
+        //}
 
-        public void DoctorBloodDraw()
-        {
-            foreach (Patient element in patientList)
-            {
-                element.BloodLevel -= 2;
-                element.HealthLevel += 3;
-            }
-        }
+        //public void DoctorBloodDraw()
+        //{
+        //    foreach (Patient element in patientList)
+        //    {
+        //        element.BloodLevel -= 2;
+        //        element.HealthLevel += 3;
+        //    }
+        //}
 
-        public void DoctorCare()
-        {
-            foreach (Patient element in patientList)
-            {
-                element.BloodLevel += 2;
-                element.HealthLevel += 2;
+        //public void DoctorCare()
+        //{
+        //    foreach (Patient element in patientList)
+        //    {
+        //        element.BloodLevel += 2;
+        //        element.HealthLevel += 2;
 
-            }
-        }
+        //    }
+        //}
 
 
         //***********8

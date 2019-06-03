@@ -11,11 +11,16 @@ namespace UniversityHospital.cs
         {
             bool start = true;
 
-            Patient patient = new Patient("", 0);
+            //Patient patient = new Patient("", 0);
             Payroll payroll = new Payroll();
-            Console.WriteLine("Welcome to Univserity Hospitals Database!");
+            Nurse nurse = new Nurse();
+            Doctor doctor = new Doctor();
 
-            payroll.AddPatientToList();
+            Hospital hospital = new Hospital();
+
+        Console.WriteLine("Welcome to Univserity Hospitals Database!");
+
+            //patient.AddPatientToList();
             payroll.AddReceptionistToList();
             payroll.AddNurseToList();
             payroll.AddJanitorToList();
@@ -36,7 +41,7 @@ namespace UniversityHospital.cs
                 switch (menuResponse)
                 {
                     case 1:
-                        payroll.PatientList();
+                        hospital.ShowPatientList();
                         break;
                     case 2:
                         payroll.EmployeeList();
@@ -79,19 +84,19 @@ namespace UniversityHospital.cs
                         switch (medicalResponse)
                         {
                             case 1:
-                                payroll.DoctorBloodDraw();
+                                doctor.DoctorBloodDraw(hospital);
                                 Console.WriteLine("Doctor has drawn blood samples and sent them to the lab for testing.");
                                 break;
                             case 2:
-                                payroll.DoctorCare();
+                                doctor.DoctorCare(hospital);
                                 Console.WriteLine("Doctor has cared for the patients");
                                 break;
                             case 3:
-                                payroll.NurseBloodDraw();
+                                nurse.NurseBloodDraw(hospital);
                                 Console.WriteLine("Nurse has drawn blood sample and sent it to the lab for testing.");
                                 break;
                             case 4:
-                                payroll.NurseCare();
+                                nurse.NurseCare(hospital);
                                 Console.WriteLine("Doctor has cared for the patients");
                                 break;
                         }

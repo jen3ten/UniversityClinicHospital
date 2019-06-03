@@ -8,6 +8,11 @@ namespace UniversityHospital.cs
     {
         public string SpecialtyArea { get; set; }
 
+        public Nurse()
+        {
+
+        }
+
         public Nurse(string name, int number, string specialty, string patientNumber) : base()
         {
             Position = "Nurse";
@@ -18,6 +23,27 @@ namespace UniversityHospital.cs
             NumberOfPatients = patientNumber;
             Payment = false;
         }
+
+        public void NurseCare(Hospital hospital)
+        {
+
+            foreach (Patient element in hospital.PatientList)
+            {
+                element.BloodLevel++;
+                element.HealthLevel++;
+            }
+        }
+
+        public void NurseBloodDraw(Hospital hospital)
+        {
+            foreach (Patient element in hospital.PatientList)
+            {
+                element.BloodLevel--;
+                element.HealthLevel++;
+            }
+        }
+
+
 
         //public override void PaySalary()
         //{
