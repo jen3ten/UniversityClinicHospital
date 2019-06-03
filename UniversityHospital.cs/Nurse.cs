@@ -19,17 +19,17 @@ namespace UniversityHospital.cs
             Payment = false;
         }
 
-        public override void PaySalary()
-        {
-            if (Payment == false)
-            {
-                Console.WriteLine($"You have paid {Name} {Salary}");
-                Payment = true;
-            }
-            else
-            {
-                Console.WriteLine($"{Name} has already been paid.");
-            }
-        }
+        //public override void PaySalary()
+        //{
+        //    if (Payment == false)
+        //    {
+        //        Console.WriteLine($"You have paid {Name} {Salary}");
+        //        Payment = true;
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine($"{Name} has already been paid.");
+        //    }
+        //}
     }
 }

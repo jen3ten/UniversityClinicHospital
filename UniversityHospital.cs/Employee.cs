@@ -13,7 +13,20 @@ namespace UniversityHospital.cs
         public string NumberOfPatients { get; set; }
         public bool Payment { get; set; }
 
-        public abstract void PaySalary();
+        //public abstract void PaySalary();
+        public void PaySalary()
+        {
+            if (Payment == false)
+            {
+                Console.WriteLine($"You have paid {Name} {Salary}");
+                Payment = true;
+            }
+            else
+            {
+                Console.WriteLine($"{Name} has already been paid.");
+            }
+        }
+
 
     }
 }
