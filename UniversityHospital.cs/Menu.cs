@@ -89,7 +89,7 @@ namespace UniversityHospital.cs
                                             case 1:// Draw blood
 
                                                 break;
-                                            case 1:// Care for
+                                            case 2:// Care for
 
                                                 break;
                                         }
