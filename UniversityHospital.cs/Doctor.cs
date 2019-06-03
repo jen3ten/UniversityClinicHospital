@@ -35,14 +35,14 @@ namespace UniversityHospital.cs
             }
         }
 
-        public override void BloodDraw()
+        public void BloodDraw()
         {
             patient.BloodLevel-=2;
             patient.HealthLevel+=3;
             Console.WriteLine("Blood sample has been drawn and sent to the lab for testing.");
         }
 
-        public override void CarePatient()
+        public void CarePatient()
         {
             patient.BloodLevel+=2;
             patient.HealthLevel+=2;

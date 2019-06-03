@@ -32,12 +32,6 @@ namespace UniversityHospital.cs
                 Console.WriteLine($"{Name} has already been paid.");
             }
         }
-        public override void BloodDraw()
-        {
-        }
-        public override void CarePatient()
-        {
-        }
 
     }
 }

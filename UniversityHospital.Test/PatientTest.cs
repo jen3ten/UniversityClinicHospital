@@ -15,5 +15,13 @@ namespace UniversityHospital.Test
             Assert.Equal(90000, sut.PatientNumber);
         }
 
+        [Fact]
+        public void Patient_List_Values()
+        {
+            Patient sut = new Patient("", number);
+
+
+        }
+
     }
 }

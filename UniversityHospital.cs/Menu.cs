@@ -8,13 +8,13 @@ namespace UniversityHospital.cs
     {
         bool start = true;
         Doctor doctor;
-        Patient patient;
 
 
 
         public void MainMenu()
         {
             Console.WriteLine("Welcome to Univserity Hospitals Database!");
+
             Payroll payroll = new Payroll();
             payroll.AddDoctorToList();
             payroll.AddNurseToList();
@@ -31,10 +31,8 @@ namespace UniversityHospital.cs
                 Console.WriteLine(" 4.  Payroll");
                 Console.WriteLine(" 5.  Done");
                 int menuResponse = Convert.ToInt32(Console.ReadLine());
-
-
                 //int menuResponse3 = Convert.ToInt32(Console.ReadLine());
-
+                
                 // STILL WORKING ON THIS, NEEDED TO REARRANGE SOME THINGS TO HAVE LIST MAKE SENSE. 
 
 
@@ -47,6 +45,7 @@ namespace UniversityHospital.cs
                 switch (menuResponse)
                 {
                     case 1:
+                        payroll.PatientList();
                         break;
                     case 2:
                         payroll.EmployeeList();

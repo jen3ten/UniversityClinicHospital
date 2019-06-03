@@ -10,7 +10,6 @@ namespace UniversityHospital.cs
         public List<Nurse> nurseList = new List<Nurse>();
         public List<Janitor> janitorList = new List<Janitor>();
         public List<Receptionist> receptionistList = new List<Receptionist>();
-        public List<Patient> patientList = new List<Patient>();
 
         Doctor dr1 = new Doctor("Francona, Terry", 8561, "Gastroenterology", "N/A");
         Doctor dr2 = new Doctor("Roth, Elise\t", 8213, "Neuro Surgeon", "N/A");
@@ -38,12 +37,6 @@ namespace UniversityHospital.cs
 
         Receptionist r1 = new Receptionist("Balou, Mary\t", 1058, "No ", "N/A");
         Receptionist r2 = new Receptionist("Lazara, Kim\t", 1058, "Yes", "N/A");
-
-        Patient p1 = new Patient("Stone, Travis", 10874);
-        Patient p2 = new Patient("Jones, Angel", 15823);
-        Patient p3 = new Patient("Hamilton, Thomas", 12561);
-        Patient p4 = new Patient("Kipnis, Jason", 16810);
-        Patient p5 = new Patient("Kluber, Bridget", 10894);
 
         public void AddDoctorToList()
         {
@@ -84,15 +77,6 @@ namespace UniversityHospital.cs
             receptionistList.Add(r2);
         }
 
-        public void AddPatientToList()
-        {
-            patientList.Add(p1);
-            patientList.Add(p2);
-            patientList.Add(p3);
-            patientList.Add(p4);
-            patientList.Add(p5);
-        }
-
 
         public void EmployeeList()
         {
@@ -127,9 +111,6 @@ namespace UniversityHospital.cs
             Console.WriteLine("Employee Name\t\t| Number | Specialty\t\t| # of Patients |");
             Console.WriteLine("------------------------|--------|----------------------|---------------|");
 
-            AddDoctorToList();
-            AddNurseToList();
-
             int i = 1;
             foreach (Doctor element in doctorList)
             {
@@ -150,9 +131,6 @@ namespace UniversityHospital.cs
             Console.WriteLine("Employee Name\t\t| Number |  Sweeping  |  On Phone   |");
             Console.WriteLine("------------------------|--------|------------|-------------|");
 
-            AddReceptionistToList();
-            AddJanitorToList();
-
             int i = 1;
             foreach (Janitor element in janitorList)
             {
@@ -165,7 +143,58 @@ namespace UniversityHospital.cs
             Console.WriteLine(" ");
         }
 
+        Patient p1 = new Patient("Stone, Travis", 10874);
+        Patient p2 = new Patient("Jones, Angel", 15823);
+        Patient p3 = new Patient("Hamilton, Thomas", 12561);
+        Patient p4 = new Patient("Kipnis, Jason", 16810);
+        Patient p5 = new Patient("Kluber, Bridget", 108945);
+
+        public List<Patient> patientList = new List<Patient>();
+
+
+        public void AddPatientToList()
+        {
+            patientList.Add(p1);
+            patientList.Add(p2);
+            patientList.Add(p3);
+            patientList.Add(p4);
+            patientList.Add(p5);
+        }
+
         public void PatientList()
+        {
+            AddPatientToList();
+
+            Console.WriteLine("\n---- Patient List: ----");
+            Console.WriteLine("Patient Name\t\t| Patient Number |  Health Level |  Blood Level   |");
+            Console.WriteLine("-------------------|--------|------------|-------------|");
+
+            int i = 1;
+            foreach (Patient element in patientList)
+            {
+                Console.WriteLine($"{i++}. {element.Name} \t|  {element.PatientNumber}  |     {element.HealthLevel}    |    {element.BloodLevel}       |");
+            }
+
+            Console.WriteLine(" ");
+        }
+
+        /*public void NurseBloodDraw()
+        {
+            foreach (Patient element in patientList)
+            {
+                patient.BloodLevel--;
+                patient.HealthLevel++;
+            }
+        }
+
+        public void NurseCarePatient()
+        {
+            patient.BloodLevel++;
+            patient.HealthLevel++;
+        }*/
+
+
+        /*public void PatientList()
         {
 
             Console.WriteLine("Patient Name\t\t| Patient Number |  Health Level |  Blood Level   |");
@@ -180,7 +209,7 @@ namespace UniversityHospital.cs
             }
 
             Console.WriteLine(" ");
-        }
+        }*/
 
 
         /*public virtual void RemoveEmployee(Payroll employeeList)

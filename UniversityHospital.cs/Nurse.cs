@@ -33,18 +33,6 @@ namespace UniversityHospital.cs
             }
         }
 
-        public override void BloodDraw()
-        {
-            foreach (Patient element in patientList)
-            patient.BloodLevel--;
-            patient.HealthLevel++;
-        }
-
-        public override void CarePatient()
-        {
-            patient.BloodLevel++;
-            patient.HealthLevel++;
-        }
 
 
 
