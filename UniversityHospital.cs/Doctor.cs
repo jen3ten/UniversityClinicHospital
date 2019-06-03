@@ -20,7 +20,7 @@ namespace UniversityHospital.cs
             EmployeeNumber = number;
             NumberOfPatients = patientNumber;
             Payment = false;
-            (Payment)//making a random comment to push
+            //Payment; //making a random comment to push
         }
 
         public override void PaySalary()
@@ -43,10 +43,11 @@ namespace UniversityHospital.cs
             Console.WriteLine("Blood sample has been drawn and sent to the lab for testing.");
         }
 
+
         public void CarePatient()
         {
-            patient.BloodLevel+=2;
-            patient.HealthLevel+=2;
+            patient.BloodLevel += 2;
+            patient.HealthLevel += 2;
         }
 
         //**********

@@ -11,6 +11,8 @@ namespace UniversityHospital.cs
 
 
 
+
+
         public void MainMenu()
         {
             Console.WriteLine("Welcome to Univserity Hospitals Database!");
@@ -72,20 +74,23 @@ namespace UniversityHospital.cs
                                                     "Select a Doctor or Nurse to draw blood sample");
 
                                 int menuResponse3 = Convert.ToInt32(Console.ReadLine());
+                                //Doctor chosenDoctor = payroll.doctorList.
                                 switch (menuResponse3)
                                 {
                                     case 1://Select Patient
                                         payroll.PatientList();              
-                                        Console.WriteLine("Which patient should be assisted?");
+
+                                        Console.WriteLine("Which patient need to be assisted?");
                                         //Create index to select from Doctor and Nurse List
 
                                         int menuResponse4 = Convert.ToInt32(Console.ReadLine());
                                         switch (menuResponse4)
                                         {
                                             case 1:// Draw blood
-                                                
+
                                                 break;
-                                            case 2://Care for
+                                            case 1:// Care for
+
                                                 break;
                                         }
                                         break;
@@ -106,6 +111,7 @@ namespace UniversityHospital.cs
                         switch (menuResponse6)
                         {
                             case 1://Select who to pay
+
                             
                                 break;
                         }
