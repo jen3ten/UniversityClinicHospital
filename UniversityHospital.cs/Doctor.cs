@@ -20,6 +20,7 @@ namespace UniversityHospital.cs
             EmployeeNumber = number;
             NumberOfPatients = patientNumber;
             Payment = false;
+            (Payment)//making a random comment to push
         }
 
         public override void PaySalary()
