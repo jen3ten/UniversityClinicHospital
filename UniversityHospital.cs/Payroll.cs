@@ -41,11 +41,11 @@ namespace UniversityHospital.cs
         Receptionist r1 = new Receptionist("Balou, Mary\t", 1058, "No ", "N/A");
         Receptionist r2 = new Receptionist("Lazara, Kim\t", 1058, "Yes", "N/A");
 
-        Patient p1 = new Patient("Stone, Travis");
-        Patient p2 = new Patient("Jones, Angel");
-        Patient p3 = new Patient("Hamilton, Thomas");
-        Patient p4 = new Patient("Kipnis, Jason");
-        Patient p5 = new Patient("Kluber, Bridget");
+        Patient p1 = new Patient("Stone, Travis", 10574);
+        Patient p2 = new Patient("Jones, Angel", 10986);
+        Patient p3 = new Patient("Hamilton, Thomas", 10025);
+        Patient p4 = new Patient("Kipnis, Jason", 10658);
+        Patient p5 = new Patient("Kluber, Bridget", 10234);
 
         public void AddDoctorToList()
         {

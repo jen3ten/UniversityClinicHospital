@@ -11,7 +11,7 @@ namespace UniversityHospital.cs
         {
             bool start = true;
 
-            Patient patient = new Patient("");
+            Patient patient = new Patient("", 0);
             Payroll payroll = new Payroll();
             Console.WriteLine("Welcome to Univserity Hospitals Database!");
 

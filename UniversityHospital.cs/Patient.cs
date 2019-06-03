@@ -11,10 +11,10 @@ namespace UniversityHospital.cs
         public int HealthLevel { get; set; }
         public int BloodLevel { get; set; }
 
-        public Patient(string name)
+        public Patient(string name, int number)
         {
             Name = name;
-            //PatientNumber = number;
+            PatientNumber = number;
             HealthLevel = 20;
             BloodLevel = 10;
         }
