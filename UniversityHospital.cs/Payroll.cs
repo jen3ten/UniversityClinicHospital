@@ -11,7 +11,6 @@ namespace UniversityHospital.cs
         public List<Nurse> nurseList = new List<Nurse>();
         public List<Janitor> janitorList = new List<Janitor>();
         public List<Receptionist> receptionistList = new List<Receptionist>();
-        public List<Patient> patientList = new List<Patient>();
 
         Doctor dr1 = new Doctor("Francona, Terry", 8561, "Gastroenterology");
         Doctor dr2 = new Doctor("Roth, Elise\t", 8213, "Neuro Surgeon");
@@ -85,15 +84,6 @@ namespace UniversityHospital.cs
             receptionistList.Add(r2);
         }
 
-        public void AddPatientToList()
-        {
-            patientList.Add(p1);
-            patientList.Add(p2);
-            patientList.Add(p3);
-            patientList.Add(p4);
-            patientList.Add(p5);
-        }
-
 
         public void EmployeeList()
         {
@@ -160,6 +150,24 @@ namespace UniversityHospital.cs
             Console.WriteLine(" ");
         }
 
+        Patient p1 = new Patient("Stone, Travis", 10874);
+        Patient p2 = new Patient("Jones, Angel", 15823);
+        Patient p3 = new Patient("Hamilton, Thomas", 12561);
+        Patient p4 = new Patient("Kipnis, Jason", 16810);
+        Patient p5 = new Patient("Kluber, Bridget", 108945);
+
+        public List<Patient> patientList = new List<Patient>();
+
+
+        public void AddPatientToList()
+        {
+            patientList.Add(p1);
+            patientList.Add(p2);
+            patientList.Add(p3);
+            patientList.Add(p4);
+            patientList.Add(p5);
+        }
+
         public void PatientList()
         {
             Console.WriteLine("\n---- Patient List: ----");
@@ -174,6 +182,34 @@ namespace UniversityHospital.cs
 
             Console.WriteLine(" ");
         }
+
+        /*public void NurseBloodDraw()
+        {
+            foreach (Patient element in patientList)
+            {
+                patient.BloodLevel--;
+                patient.HealthLevel++;
+            }
+        }
+
+        public void NurseCarePatient()
+        {
+            patient.BloodLevel++;
+            patient.HealthLevel++;
+        }*/
+
+
+        /*public virtual void RemoveEmployee(Payroll employeeList)
+        {
+            EmployeeList();
+            Console.WriteLine("Please select an employee that has been let go.");
+            Payroll removeEmployee = employeeList[Convert.ToInt32(Console.ReadLine()) - 1];
+
+            Console.WriteLine($"\n{element.Name} has been let go.");
+
+            employeeList.Remove(removeEmployee);
+        }*/
+
 
 
 
@@ -199,5 +235,21 @@ namespace UniversityHospital.cs
         //{
         //    janitorList.Remove(janitor);
         //}
+
+        //**********
+        //public Doctor ChooseEmployee(Payroll payroll)
+        //{
+        //    int i = 0;
+        //    foreach (var employee in payroll.doctorList)
+        //    {
+        //        i = i + 1;
+        //        Console.WriteLine($"{i}. {employee.Name}");
+        //    }
+        //    int choice = Convert.ToInt32(Console.ReadLine());
+        //    choice--;
+        //    Console.WriteLine($"You have chosen {payroll.doctorList[choice].Name}");
+        //    return payroll.doctorList[choice];
+        //}
+
     }
 }

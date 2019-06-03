@@ -7,9 +7,12 @@ namespace UniversityHospital.cs
     public class Menu
     {
 
+        bool start = true;
+        
         public void MainMenu()
         {
             bool start = true;
+
             Patient patient = new Patient("");
             Payroll payroll = new Payroll();
             Console.WriteLine("Welcome to Univserity Hospitals Database!");
@@ -19,6 +22,10 @@ namespace UniversityHospital.cs
             payroll.AddNurseToList();
             payroll.AddJanitorToList();
             payroll.AddDoctorToList();
+
+            Patient patient = new Patient("", 0);
+            Payroll payroll = new Payroll();
+            Console.WriteLine("Welcome to Univserity Hospitals Database!");
 
 
             do
@@ -49,11 +56,11 @@ namespace UniversityHospital.cs
                         }
 
                         break;
-                       
+
                     case 3://Inform Doctor or Nurse of Patient Need
                         Console.WriteLine("1. Inform Doctor or Nurse of Patient Need\n" +
-                                          "2. Review Receptionists and Janitors' Status'" );
-                                
+                                          "2. Review Receptionists and Janitors' Status'");
+
                         int menuResponse2 = Convert.ToInt32(Console.ReadLine());
                         switch (menuResponse2)
                         {
@@ -74,7 +81,7 @@ namespace UniversityHospital.cs
                                         switch (menuResponse4)
                                         {
                                             case 1:// Draw blood
-                                                
+
                                                 break;
                                             case 2://Care for
                                                 break;
@@ -97,7 +104,7 @@ namespace UniversityHospital.cs
                         switch (menuResponse6)
                         {
                             case 1://Select who to pay
-                            
+
                                 break;
                         }
                         break;
@@ -112,5 +119,5 @@ namespace UniversityHospital.cs
         }
 
     }
-        
+
 }

@@ -6,8 +6,7 @@ namespace UniversityHospital.cs
 {
     public class Patient
     {
-
-        public string Name { get; set; }
+       public string Name { get; set; }
         public int PatientNumber { get; set; }
         public int HealthLevel { get; set; }
         public int BloodLevel { get; set; }
@@ -19,6 +18,7 @@ namespace UniversityHospital.cs
             HealthLevel = 20;
             BloodLevel = 10;
         }
+
 
 
 
@@ -59,5 +59,6 @@ namespace UniversityHospital.cs
             HealthLevel += 2;
         }
         */
+
     }
 }
