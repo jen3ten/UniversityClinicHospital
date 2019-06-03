@@ -7,8 +7,6 @@ namespace UniversityHospital.cs
     public class Menu
     {
 
-        bool start = true;
-        
         public void MainMenu()
         {
             bool start = true;
@@ -22,10 +20,6 @@ namespace UniversityHospital.cs
             payroll.AddNurseToList();
             payroll.AddJanitorToList();
             payroll.AddDoctorToList();
-
-            Patient patient = new Patient("", 0);
-            Payroll payroll = new Payroll();
-            Console.WriteLine("Welcome to Univserity Hospitals Database!");
 
 
             do
